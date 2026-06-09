@@ -1,30 +1,30 @@
 {
   "seo": {
-    "title": "Sarah Lima | Mapa de Carreira em Tecnologia",
-    "description": "Mapa de carreira de Sarah Lima, com objetivos profissionais, trilha de aprendizagem, habilidades, idiomas e contatos.",
-    "author": "Sarah Lima",
-    "canonicalUrl": "https://exemplo.com/mapa-de-carreira/"
+    "title": "Giovanna Karolline | Mapa de Carreira em Tecnologia",
+    "description": "a",
+    "author": "Giovanna Karolline Menezes Ribeiro",
+    "canonicalUrl": "githubpages"
   },
   "profile": {
-    "name": "Sarah Lima",
-    "headline": "Educacao, Web e Gestao de TI",
+    "name": "Giovanna Karolline Menezes Ribeiro",
+    "headline": "Desenvolvimento Backend",
     "photo": "assets/images/profile.jpg",
-    "photoAlt": "Foto profissional de Sarah Lima",
-    "summary": "Tenho experiencia em desenvolvimento web, educacao e gestao de tecnologia. Participei de projetos que transformaram ideias em solucoes digitais e agora organizo meu mapa de carreira com foco em aprendizagem continua, colaboracao e impacto profissional.",
+    "photoAlt": "Foto profissional de Giovanna Karolline",
+    "summary": "Tenho experiência em desenvolvimento fullstack, mas eu me encontrei mesmo na área de backend. Participo de projetos que criam solucoes digitais para a área de educação e para proteção infantil e este é o meu mapa de carreira, focado em aprendizagem continua, colaboracao e impacto profissional.",
     "cvUrl": "#"
   },
   "contacts": [
     {
-      "label": "sarah.lima@example.com",
-      "url": "mailto:sarah.lima@example.com"
+      "label": "mennezes.giovanna@gmail.com",
+      "url": "mailto:mennezes.giovanna@gmail.com"
     },
     {
-      "label": "linkedin.com/in/sarahlima",
-      "url": "https://www.linkedin.com/in/sarahlima"
+      "label": "linkedin.com/in/giovanna-karolline",
+      "url": "https://www.linkedin.com/in/giovanna-karolline"
     },
     {
-      "label": "github.com/sarahlima",
-      "url": "https://github.com/sarahlima"
+      "label": "github.com/giovannakarolline",
+      "url": "https://github.com/giovannakarolline"
     }
   ],
   "careerSteps": [
@@ -117,11 +117,11 @@
     },
     {
       "name": "Ingles",
-      "level": "Tecnico"
+      "level": "Intermediário"
     },
     {
-      "name": "Espanhol",
-      "level": "Profissional"
+      "name": "n",
+      "level": "n"
     }
   ]
 }
