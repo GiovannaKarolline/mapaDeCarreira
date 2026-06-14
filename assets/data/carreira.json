@@ -1,127 +1,182 @@
 {
   "seo": {
-    "title": "Giovanna Karolline | Mapa de Carreira em Tecnologia",
-    "description": "a",
+    "title": "Giovanna Karolline | Desenvolvedora de Software",
+    "description": "Currículo e mapa de carreira de Giovanna Karolline Menezes Ribeiro — estudante de ADS no IFSP, desenvolvedora fullstack com foco em backend e impacto social.",
     "author": "Giovanna Karolline Menezes Ribeiro",
-    "canonicalUrl": "githubpages"
+    "canonicalUrl": "https://giovannakarolline.github.io/mapa-de-carreira"
   },
   "profile": {
-    "name": "Giovanna Karolline Menezes Ribeiro",
-    "headline": "Desenvolvimento Backend",
+    "name": "Giovanna Karolline",
+    "lastName": "Menezes Ribeiro",
+    "headline": "Desenvolvedora de Software",
+    "location": "São Paulo, SP",
+    "objective": "Busco um estágio voltado ao desenvolvimento de software.",
     "photo": "assets/images/profile.jpg",
-    "photoAlt": "Foto profissional de Giovanna Karolline",
-    "summary": "Tenho experiência em desenvolvimento fullstack, mas eu me encontrei mesmo na área de backend. Participo de projetos que criam solucoes digitais para a área de educação e para proteção infantil e este é o meu mapa de carreira, focado em aprendizagem continua, colaboracao e impacto profissional.",
-    "cvUrl": "#"
+    "photoAlt": "Foto profissional de Giovanna Karolline Menezes Ribeiro",
+    "summary": "Estudante de Análise e Desenvolvimento de Sistemas no IFSP, com experiência em múltiplas linguagens e frameworks. Faço parte de equipe de projeto de extensão, desenvolvendo plataforma educacional em Flutter (Dart), atuando na documentação técnica (UML, backlog, requisitos), prototipação em Figma e aplicando metodologia ágil SCRUM.",
+    "cvUrl": "Currículo_Giovanna_Ribeiro.PDF"
   },
   "contacts": [
+    { "label": "(11) 94926-4778",                      "url": "tel:+5511949264778",                                    "icon": "phone"    },
+    { "label": "mennezes.giovanna@gmail.com",           "url": "mailto:mennezes.giovanna@gmail.com",                    "icon": "email"    },
+    { "label": "linkedin.com/in/giovanna-karolline",   "url": "https://www.linkedin.com/in/giovanna-karolline",        "icon": "linkedin" },
+    { "label": "github.com/GiovannaKarolline",         "url": "https://github.com/GiovannaKarolline",                  "icon": "github"   }
+  ],
+  "stats": [
+    { "value": "2+", "label": "Anos de estudo"     },
+    { "value": "3",  "label": "Certificações"      },
+    { "value": "7+", "label": "Linguagens e tools" }
+  ],
+  "education": [
     {
-      "label": "mennezes.giovanna@gmail.com",
-      "url": "mailto:mennezes.giovanna@gmail.com"
+      "course": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "institution": "Instituto Federal de Educação, Ciência e Tecnologia de São Paulo",
+      "location": "São Paulo – SP",
+      "period": "03/2024 – 12/2026",
+      "status": "Em andamento",
+      "icon": "🎓"
     },
     {
-      "label": "linkedin.com/in/giovanna-karolline",
-      "url": "https://www.linkedin.com/in/giovanna-karolline"
+      "course": "Ensino Médio integrado ao Técnico em Logística",
+      "institution": "Instituto Federal de Educação, Ciência e Tecnologia de São Paulo",
+      "location": "São Paulo – SP",
+      "period": "Concluído em 2023",
+      "status": "Concluído",
+      "icon": "📋"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "JAVA 85 – Generation Brasil",
+      "issuer": "Generation Brasil",
+      "area": "Desenvolvimento Fullstack Java",
+      "status": "Em andamento",
+      "icon": "☕"
     },
     {
-      "label": "github.com/giovannakarolline",
-      "url": "https://github.com/giovannakarolline"
+      "name": "AWS Academy Data Engineering",
+      "issuer": "Amazon Web Services",
+      "area": "Engenharia de Dados",
+      "status": "Concluído",
+      "icon": "☁️"
+    },
+    {
+      "name": "Defesa de Redes",
+      "issuer": "Cisco",
+      "area": "Defesa de Redes de Computadores",
+      "status": "Concluído",
+      "url": "https://www.credly.com/badges/1935fef3-e074-4090-96bf-1cb4ce66e556/public_url",
+      "icon": "🛡️"
     }
   ],
   "careerSteps": [
     {
-      "title": "Desenvolvedora Junior",
-      "description": "Consolidar fundamentos de desenvolvimento web, versionamento, acessibilidade, logica de programacao e boas praticas de comunicacao em equipe.",
+      "title": "Estudante & Estagiária",
+      "period": "Etapa atual · 2024 –",
+      "status": "current",
+      "icon": "🌱",
+      "description": "Consolidação de fundamentos em múltiplas linguagens e frameworks. Participação em projeto de extensão com desenvolvimento de plataforma educacional em Flutter (Dart), aplicando SCRUM, Figma para prototipação e documentação técnica (UML, backlog, requisitos).",
       "softSkills": [
-        "Comunicacao clara para pedir ajuda e registrar aprendizados.",
-        "Organizacao para estudar, praticar e acompanhar tarefas.",
-        "Curiosidade para investigar problemas e testar solucoes."
+        "Comunicação assertiva e trabalho em equipe",
+        "Organização via SCRUM e gestão de requisitos",
+        "Proatividade para aprender e aplicar novas tecnologias"
       ],
       "roadmap": [
-        "HTML semantico",
-        "CSS responsivo",
-        "JavaScript",
-        "Git e GitHub",
-        "Acessibilidade"
+        "Flutter / Dart",
+        "ReactJS",
+        "Java",
+        "Python",
+        "Figma",
+        "SQL",
+        "Git & GitHub"
       ]
     },
     {
-      "title": "Desenvolvedora Pleno",
-      "description": "Atuar com mais autonomia, participar de decisoes tecnicas e entregar funcionalidades com qualidade, testes e documentacao.",
+      "title": "Desenvolvedora Júnior",
+      "period": "Próximo passo · 2026+",
+      "status": "next",
+      "icon": "🚀",
+      "description": "Atuação com autonomia em projetos fullstack, foco em backend com Java / Node.js, entrega de funcionalidades com qualidade, testes automatizados e documentação profissional.",
       "softSkills": [
-        "Responsabilidade sobre entregas e prazos combinados.",
-        "Colaboracao em revisoes de codigo e planejamento.",
-        "Capacidade de explicar escolhas tecnicas para diferentes publicos."
+        "Responsabilidade sobre entregas e prazos",
+        "Colaboração em code reviews e decisões técnicas",
+        "Capacidade de explicar escolhas para diferentes públicos"
       ],
       "roadmap": [
-        "React",
+        "Spring Boot",
         "Node.js",
         "APIs REST",
-        "Testes automatizados",
-        "Banco de dados"
+        "Testes Automatizados",
+        "PostgreSQL",
+        "Docker",
+        "CI/CD"
       ]
     },
     {
-      "title": "Lideranca tecnica",
-      "description": "Contribuir para padroes de arquitetura, orientar pessoas em desenvolvimento e apoiar a tomada de decisao tecnica com base em dados e contexto.",
+      "title": "Liderança Técnica",
+      "period": "Objetivo de longo prazo",
+      "status": "next",
+      "icon": "⭐",
+      "description": "Contribuir para arquitetura de sistemas, orientar equipes de desenvolvimento e apoiar decisões técnicas com visão sistêmica sobre produto, pessoas e tecnologia.",
       "softSkills": [
-        "Mentoria com escuta ativa e feedback construtivo.",
-        "Priorizacao entre impacto, custo, risco e aprendizado.",
-        "Visao sistemica sobre produto, pessoas e tecnologia."
+        "Mentoria com escuta ativa e feedback construtivo",
+        "Visão sistêmica sobre produto, pessoas e tecnologia",
+        "Facilitação de ambientes psicologicamente seguros"
       ],
       "roadmap": [
-        "Arquitetura de software",
-        "Cloud",
-        "Observabilidade",
-        "Seguranca"
+        "Arquitetura de Software",
+        "Cloud AWS",
+        "Engenharia de Dados",
+        "Segurança",
+        "Gestão de Pessoas"
       ]
     }
   ],
   "skillGroups": [
     {
-      "title": "Frontend",
+      "title": "Linguagens",
+      "icon": "〈/〉",
       "skills": [
-        {
-          "name": "HTML, CSS e JavaScript",
-          "level": 85
-        },
-        {
-          "name": "React",
-          "level": 70
-        }
+        { "name": "JavaScript / HTML / CSS", "level": 80 },
+        { "name": "Java",                    "level": 65 },
+        { "name": "Python",                  "level": 60 },
+        { "name": "C",                       "level": 50 }
       ]
     },
     {
-      "title": "Backend e dados",
+      "title": "Frameworks & Libs",
+      "icon": "⬡",
       "skills": [
-        {
-          "name": "Node.js e APIs",
-          "level": 65
-        },
-        {
-          "name": "SQL",
-          "level": 60
-        }
+        { "name": "ReactJS",       "level": 70 },
+        { "name": "Flutter / Dart","level": 65 },
+        { "name": "Bootstrap",     "level": 75 },
+        { "name": "Flask",         "level": 50 }
+      ]
+    },
+    {
+      "title": "Ferramentas & Métodos",
+      "icon": "◈",
+      "skills": [
+        { "name": "Git & GitHub",      "level": 80 },
+        { "name": "SQL",               "level": 65 },
+        { "name": "Figma",             "level": 60 },
+        { "name": "SCRUM / Agile",     "level": 70 }
       ]
     }
   ],
   "otherSkills": [
-    "Git",
-    "Comunicacao",
-    "Documentacao",
-    "Code review"
+    "Lógica de programação",
+    "Versionamento de código",
+    "Gestão de requisitos",
+    "Documentação técnica",
+    "Diagramas UML",
+    "Comunicação assertiva",
+    "Trabalho em equipe",
+    "AWS",
+    "Linux"
   ],
   "languages": [
-    {
-      "name": "Portugues",
-      "level": "Nativo"
-    },
-    {
-      "name": "Ingles",
-      "level": "Intermediário"
-    },
-    {
-      "name": "n",
-      "level": "n"
-    }
+    { "name": "Português", "level": "Nativo",        "percent": 100 },
+    { "name": "Inglês",    "level": "Intermediário",  "percent": 60  }
   ]
 }
