@@ -6,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Giovanna Karolline | Desenvolvedora de Software</title>
-  <meta name="description" content="Currículo de Giovanna Karolline Menezes Ribeiro — estudante de ADS no IFSP, desenvolvedora com experiência em Flutter, React, Java e Python.">
+  <meta name="description"
+    content="Currículo de Giovanna Karolline Menezes Ribeiro — estudante de ADS no IFSP, desenvolvedora com experiência em C#, React, Java e Python.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#5b21b6">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Giovanna Karolline | Desenvolvedora de Software">
-  <meta property="og:description" content="Currículo e mapa de carreira com trajetória, educação, certificações e habilidades.">
-  <meta property="og:image"       content="assets/images/profile.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Giovanna Karolline | Desenvolvedora de Software">
+  <meta property="og:description"
+    content="Currículo e mapa de carreira com trajetória, educação, certificações e habilidades.">
+  <meta property="og:image" content="assets/images/profile.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -35,6 +39,31 @@
     <p class="loader-text">carregando...</p>
   </div>
 
+  <!--
+    FAILSAFE DE EMERGÊNCIA (ES5 puro, sem const/let/arrow):
+    Esconde o loading após 4s mesmo que carreira-json.js falhe completamente.
+    Este script executa IMEDIATAMENTE (não-defer), garantindo que o timer
+    seja registrado antes de qualquer outro código.
+  -->
+  <script>
+    (function () {
+      var t = setTimeout(function () {
+        var loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.opacity = '0';
+          loading.style.visibility = 'hidden';
+          loading.style.pointerEvents = 'none';
+          setTimeout(function () {
+            if (loading && loading.parentNode) {
+              loading.parentNode.removeChild(loading);
+            }
+          }, 500);
+        }
+      }, 4000);
+      window._loadingFailsafe = t;
+    }());
+  </script>
+
   <!-- Scroll to top -->
   <button id="scroll-top" aria-label="Voltar ao topo">↑</button>
 
@@ -47,16 +76,15 @@
       GK<span class="nav-brand-dot">.</span>dev
     </a>
 
-    <button class="nav-menu-btn" id="menu-btn"
-      aria-expanded="false" aria-controls="nav-links"
+    <button class="nav-menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links"
       aria-label="Abrir menu">&#9776;</button>
 
     <ul class="nav-links" id="nav-links" role="list">
-      <li><a href="#sobre"         class="nav-link">Sobre</a></li>
-      <li><a href="#educacao"      class="nav-link">Educação</a></li>
-      <li><a href="#carreira"      class="nav-link">Carreira</a></li>
+      <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="#educacao" class="nav-link">Educação</a></li>
+      <li><a href="#carreira" class="nav-link">Carreira</a></li>
       <li><a href="#certificacoes" class="nav-link">Certificações</a></li>
-      <li><a href="#habilidades"   class="nav-link">Habilidades</a></li>
+      <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
       <li>
         <a id="nav-cv-link" href="#" target="_blank" rel="noopener" class="nav-cta">
           ↓ Baixar CV
@@ -70,28 +98,99 @@
   ══════════════════════════════════════ -->
   <section id="hero" aria-labelledby="hero-nome">
 
-    <!-- Decoração geométrica SVG -->
     <div class="hero-geo-wrap" aria-hidden="true">
-      <svg class="hero-geo-svg" viewBox="0 0 900 650" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <!-- Bloco principal -->
-        <polygon points="310,0 900,0 900,650 160,650" fill="#5b21b6"/>
-        <!-- Triângulo âmbar flutuante -->
-        <polygon points="295,0 330,0 310,40" fill="#d97706" opacity="0.9"/>
-        <!-- Diamante âmbar -->
-        <rect x="282" y="110" width="36" height="36" fill="#d97706" opacity="0.75" transform="rotate(45 300 128)"/>
-        <!-- Linhas de grade na área roxa -->
-        <line x1="350" y1="0" x2="200" y2="650" stroke="white" stroke-width="1" opacity="0.07"/>
-        <line x1="500" y1="0" x2="350" y2="650" stroke="white" stroke-width="1" opacity="0.05"/>
-        <line x1="650" y1="0" x2="500" y2="650" stroke="white" stroke-width="1" opacity="0.04"/>
-        <!-- Acento verde no canto -->
-        <polygon points="160,650 240,650 160,590" fill="#0f6b4d" opacity="0.65"/>
-        <!-- Hexágono decorativo -->
-        <polygon points="720,80 750,63 780,80 780,113 750,130 720,113" fill="none" stroke="white" stroke-width="1.5" opacity="0.15"/>
-        <polygon points="800,280 820,268 840,280 840,303 820,315 800,303" fill="none" stroke="white" stroke-width="1.5" opacity="0.12"/>
-        <!-- Ponto decorativo -->
-        <circle cx="390" cy="320" r="4" fill="#d97706" opacity="0.5"/>
-        <circle cx="600" cy="500" r="3" fill="white" opacity="0.2"/>
+      <svg class="hero-geo-svg" viewBox="0 0 900 650" preserveAspectRatio="xMidYMid slice"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Padrão de pontos na área roxa -->
+          <pattern id="dot-purple" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="11" cy="11" r="1" fill="white" opacity="0.1" />
+          </pattern>
+          <!-- Padrão de linhas diagonais -->
+          <pattern id="diag-lines" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"
+            patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="30" stroke="white" stroke-width="0.5" opacity="0.06" />
+          </pattern>
+        </defs>
+
+        <!-- Bloco roxo principal -->
+        <polygon points="310,0 900,0 900,650 160,650" fill="#5b21b6" />
+
+        <!-- Sobreposição de pontos na área roxa -->
+        <polygon points="310,0 900,0 900,650 160,650" fill="url(#dot-purple)" />
+
+        <!-- Linhas diagonais na área roxa -->
+        <polygon points="310,0 900,0 900,650 160,650" fill="url(#diag-lines)" />
+
+        <!-- Círculos concêntricos decorativos (centro da foto) -->
+        <circle cx="680" cy="280" r="140" fill="none" stroke="white" stroke-width="1" opacity="0.06" />
+        <circle cx="680" cy="280" r="200" fill="none" stroke="white" stroke-width="1" opacity="0.04" />
+        <circle cx="680" cy="280" r="260" fill="none" stroke="white" stroke-width="0.5" opacity="0.03" />
+
+        <!-- Triângulo âmbar topo -->
+        <polygon points="295,0 330,0 310,40" fill="#d97706" opacity="0.9" />
+        <!-- Segundo triângulo menor -->
+        <polygon points="340,0 358,0 349,22" fill="#d97706" opacity="0.5" />
+
+        <!-- Losango âmbar grande -->
+        <rect x="282" y="110" width="36" height="36" fill="#d97706" opacity="0.75" transform="rotate(45 300 128)" />
+        <!-- Losango menor, deslocado -->
+        <rect x="340" y="95" width="16" height="16" fill="#d97706" opacity="0.35" transform="rotate(45 348 103)" />
+
+        <!-- Hexágonos decorativos — vários tamanhos -->
+        <polygon points="720,80 750,63 780,80 780,113 750,130 720,113" fill="none" stroke="white" stroke-width="1.5"
+          opacity="0.18" />
+        <polygon points="800,280 820,268 840,280 840,303 820,315 800,303" fill="none" stroke="white" stroke-width="1.5"
+          opacity="0.14" />
+        <polygon points="380,470 400,458 420,470 420,494 400,506 380,494" fill="none" stroke="white" stroke-width="1"
+          opacity="0.10" />
+        <polygon points="850,520 862,513 874,520 874,534 862,541 850,534" fill="none" stroke="white" stroke-width="1"
+          opacity="0.10" />
+
+        <!-- Cruz decorativa -->
+        <rect x="490" y="580" width="24" height="3" fill="white" opacity="0.12" rx="1" />
+        <rect x="500" y="570" width="3" height="24" fill="white" opacity="0.12" rx="1" />
+
+        <!-- Linhas de grade inclinadas -->
+        <line x1="350" y1="0" x2="200" y2="650" stroke="white" stroke-width="1" opacity="0.07" />
+        <line x1="500" y1="0" x2="350" y2="650" stroke="white" stroke-width="1" opacity="0.05" />
+        <line x1="650" y1="0" x2="500" y2="650" stroke="white" stroke-width="1" opacity="0.04" />
+
+        <!-- Linha horizontal tracejada decorativa -->
+        <line x1="370" y1="600" x2="900" y2="600" stroke="white" stroke-width="1" stroke-dasharray="6 10"
+          opacity="0.08" />
+
+        <!-- Acento verde no canto inferior esquerdo -->
+        <polygon points="160,650 240,650 160,590" fill="#0f6b4d" opacity="0.65" />
+        <!-- Segundo acento verde, menor -->
+        <polygon points="240,650 280,650 240,620" fill="#0f6b4d" opacity="0.30" />
+
+        <!-- Triângulo violeta escuro no canto direito -->
+        <polygon points="900,580 900,650 820,650" fill="rgba(28,23,16,.15)" />
+
+        <!-- Pontos decorativos -->
+        <circle cx="390" cy="320" r="4" fill="#d97706" opacity="0.55" />
+        <circle cx="450" cy="180" r="3" fill="#d97706" opacity="0.35" />
+        <circle cx="600" cy="500" r="3" fill="white" opacity="0.20" />
+        <circle cx="860" cy="200" r="5" fill="white" opacity="0.10" />
+        <circle cx="750" cy="580" r="4" fill="white" opacity="0.12" />
+
+        <!-- Retângulo fino decorativo -->
+        <rect x="360" y="0" width="2" height="80" fill="white" opacity="0.12" />
+        <rect x="410" y="0" width="1" height="50" fill="#d97706" opacity="0.4" />
       </svg>
+    </div>
+    <!-- Decorações geométricas CSS — camada viva no hero -->
+    <div class="hero-deco-layer" aria-hidden="true">
+      <div class="hd-square-lg"></div>
+      <div class="hd-square-md"></div>
+      <div class="hd-diamond-a"></div>
+      <div class="hd-diamond-b"></div>
+      <div class="hd-diamond-c"></div>
+      <div class="hd-ring"></div>
+      <div class="hd-plus"></div>
+      <div class="hd-tri"></div>
+      <div class="hd-line"></div>
     </div>
 
     <div class="hero-inner">
@@ -116,8 +215,8 @@
         <p class="hero-objective" id="profile-objective"></p>
 
         <div class="hero-actions">
-          <a id="cv-link" href="#" target="_blank" rel="noopener"
-             class="btn-primary" aria-label="Baixar currículo em PDF">
+          <a id="cv-link" href="#" target="_blank" rel="noopener" class="btn-primary"
+            aria-label="Baixar currículo em PDF">
             ↓ Baixar Currículo
           </a>
           <a href="#carreira" class="btn-ghost">Ver carreira →</a>
@@ -131,16 +230,13 @@
       </div>
 
       <!-- Foto com moldura geométrica -->
-      <div class="hero-photo-col" aria-hidden="true">
+      <div class="hero-photo-col">
         <div class="photo-frame-outer">
-          <div class="photo-frame-deco-1"></div>
-          <div class="photo-frame-deco-2"></div>
-          <img
-            id="profile-photo"
-            class="hero-photo"
-            src="assets/images/profile.jpg"
-            alt="Foto profissional de Giovanna Karolline"
-            width="260" height="260" loading="eager">
+          <div class="photo-frame-deco-3"></div><!-- anel girante externo -->
+          <div class="photo-frame-deco-1"></div><!-- losango interno -->
+          <img id="profile-photo" class="hero-photo" src="assets/images/profile.jpg" alt="Foto de Giovanna Karolline"
+            width="295" height="295" loading="eager">
+          <div class="photo-frame-deco-2"></div><!-- canto âmbar -->
         </div>
       </div>
     </div>
@@ -156,7 +252,7 @@
       <div class="section-inner">
         <div class="section-number-bg" aria-hidden="true">01</div>
         <header class="section-header">
-          <span class="section-label">perfil profissional</span>
+          <span class="section-label">perfil profissional</span><br />
           <h2 class="section-title" id="titulo-sobre">Sobre Mim</h2>
         </header>
         <div class="sobre-card">
@@ -171,7 +267,7 @@
       <div class="section-inner">
         <div class="section-number-bg" aria-hidden="true">02</div>
         <header class="section-header">
-          <span class="section-label">formação acadêmica</span>
+          <span class="section-label">formação acadêmica</span><br />
           <h2 class="section-title" id="titulo-educacao">Educação</h2>
         </header>
         <div id="education-list" class="edu-grid" aria-label="Formação acadêmica"></div>
@@ -183,9 +279,9 @@
       <div class="section-inner">
         <div class="section-number-bg" aria-hidden="true">03</div>
         <header class="section-header">
-          <span class="section-label">trajetória profissional</span>
+          <span class="section-label">trajetória profissional</span><br />
           <h2 class="section-title" id="titulo-carreira">Mapa de Carreira</h2>
-          <p class="section-subtitle">Da base sólida ao impacto real — cada etapa com propósito.</p>
+          <p class="section-subtitle">Objetivos de carreira, cada etapa com o seu propósito.</p>
         </header>
         <div id="career-timeline" class="timeline" role="list" aria-label="Etapas da carreira"></div>
       </div>
@@ -196,7 +292,7 @@
       <div class="section-inner">
         <div class="section-number-bg" aria-hidden="true">04</div>
         <header class="section-header">
-          <span class="section-label">certificações e cursos</span>
+          <span class="section-label">certificações e cursos</span><br />
           <h2 class="section-title" id="titulo-certs">Certificações</h2>
         </header>
         <div id="cert-grid" class="cert-grid" aria-label="Certificações"></div>
@@ -208,9 +304,9 @@
       <div class="section-inner">
         <div class="section-number-bg" aria-hidden="true">05</div>
         <header class="section-header">
-          <span class="section-label">competências técnicas</span>
+          <span class="section-label">competências técnicas</span><br />
           <h2 class="section-title" id="titulo-habilidades">Habilidades</h2>
-          <p class="section-subtitle">Tecnologias e ferramentas aplicadas em projetos reais.</p>
+          <p class="section-subtitle">Tecnologias e ferramentas aplicadas em projetos.</p>
         </header>
         <div id="skill-groups" class="skills-grid" role="list" aria-label="Grupos de habilidades"></div>
         <div class="other-skills-block animate-target">
@@ -228,7 +324,7 @@
       <div class="section-inner section-inner--narrow">
         <div class="section-number-bg" aria-hidden="true">06</div>
         <header class="section-header">
-          <span class="section-label">comunicação</span>
+          <span class="section-label">comunicação</span><br />
           <h2 class="section-title" id="titulo-idiomas">Idiomas</h2>
         </header>
         <div class="languages-wrap animate-target">
@@ -253,6 +349,8 @@
     </p>
   </footer>
 
+  <!-- Script principal: dados + render + UI (defer = executa após parse do HTML) -->
   <script src="assets/js/carreira-json.js" defer></script>
 </body>
+
 </html>

@@ -17,15 +17,40 @@
     "cvUrl": "Currículo_Giovanna_Ribeiro.PDF"
   },
   "contacts": [
-    { "label": "(11) 94926-4778",                      "url": "tel:+5511949264778",                                    "icon": "phone"    },
-    { "label": "mennezes.giovanna@gmail.com",           "url": "mailto:mennezes.giovanna@gmail.com",                    "icon": "email"    },
-    { "label": "linkedin.com/in/giovanna-karolline",   "url": "https://www.linkedin.com/in/giovanna-karolline",        "icon": "linkedin" },
-    { "label": "github.com/GiovannaKarolline",         "url": "https://github.com/GiovannaKarolline",                  "icon": "github"   }
+    {
+      "label": "(11) 94926-4778",
+      "url": "tel:+5511949264778",
+      "icon": "phone"
+    },
+    {
+      "label": "mennezes.giovanna@gmail.com",
+      "url": "mailto:mennezes.giovanna@gmail.com",
+      "icon": "email"
+    },
+    {
+      "label": "linkedin.com/in/giovanna-karolline",
+      "url": "https://www.linkedin.com/in/giovanna-karolline",
+      "icon": "linkedin"
+    },
+    {
+      "label": "github.com/GiovannaKarolline",
+      "url": "https://github.com/GiovannaKarolline",
+      "icon": "github"
+    }
   ],
   "stats": [
-    { "value": "2+", "label": "Anos de estudo"     },
-    { "value": "3",  "label": "Certificações"      },
-    { "value": "7+", "label": "Linguagens e tools" }
+    {
+      "value": "2+",
+      "label": "Anos de estudo"
+    },
+    {
+      "value": "3",
+      "label": "Certificações"
+    },
+    {
+      "value": "7+",
+      "label": "Linguagens e Frameworks"
+    }
   ],
   "education": [
     {
@@ -47,9 +72,9 @@
   ],
   "certifications": [
     {
-      "name": "JAVA 85 – Generation Brasil",
-      "issuer": "Generation Brasil",
-      "area": "Desenvolvimento Fullstack Java",
+      "name": "PROPROFISSÃO – Instituto PROA",
+      "issuer": "Instituto PROA",
+      "area": "Desenvolvimento Fullstack C# ASP.NET",
       "status": "Em andamento",
       "icon": "☕"
     },
@@ -72,7 +97,7 @@
   "careerSteps": [
     {
       "title": "Estudante & Estagiária",
-      "period": "Etapa atual · 2024 –",
+      "period": "Objetivo atual",
       "status": "current",
       "icon": "🌱",
       "description": "Consolidação de fundamentos em múltiplas linguagens e frameworks. Participação em projeto de extensão com desenvolvimento de plataforma educacional em Flutter (Dart), aplicando SCRUM, Figma para prototipação e documentação técnica (UML, backlog, requisitos).",
@@ -93,7 +118,7 @@
     },
     {
       "title": "Desenvolvedora Júnior",
-      "period": "Próximo passo · 2026+",
+      "period": "Próximo passo · 2026",
       "status": "next",
       "icon": "🚀",
       "description": "Atuação com autonomia em projetos fullstack, foco em backend com Java / Node.js, entrega de funcionalidades com qualidade, testes automatizados e documentação profissional.",
@@ -137,30 +162,66 @@
       "title": "Linguagens",
       "icon": "〈/〉",
       "skills": [
-        { "name": "JavaScript / HTML / CSS", "level": 80 },
-        { "name": "Java",                    "level": 65 },
-        { "name": "Python",                  "level": 60 },
-        { "name": "C",                       "level": 50 }
+        {
+          "name": "JavaScript / HTML / CSS",
+          "level": 80
+        },
+        {
+          "name": "Java",
+          "level": 65
+        },
+        {
+          "name": "Python",
+          "level": 60
+        },
+        {
+          "name": "C",
+          "level": 50
+        }
       ]
     },
     {
       "title": "Frameworks & Libs",
       "icon": "⬡",
       "skills": [
-        { "name": "ReactJS",       "level": 70 },
-        { "name": "Flutter / Dart","level": 65 },
-        { "name": "Bootstrap",     "level": 75 },
-        { "name": "Flask",         "level": 50 }
+        {
+          "name": "ReactJS",
+          "level": 70
+        },
+        {
+          "name": "C#",
+          "level": 65
+        },
+        {
+          "name": "Bootstrap",
+          "level": 75
+        },
+        {
+          "name": "Flask",
+          "level": 50
+        }
       ]
     },
     {
       "title": "Ferramentas & Métodos",
       "icon": "◈",
       "skills": [
-        { "name": "Git & GitHub",      "level": 80 },
-        { "name": "SQL",               "level": 65 },
-        { "name": "Figma",             "level": 60 },
-        { "name": "SCRUM / Agile",     "level": 70 }
+        {
+          "name": "Git & GitHub",
+          "level": 80
+        },
+        {
+          "name": "SQL",
+          "level": 65
+        },
+        {
+          "name": "Figma",
+          "level": 60
+        },
+        {
+          "name": "SCRUM / Agile",
+          "level": 70
+        }
       ]
     }
   ],
@@ -176,7 +237,15 @@
     "Linux"
   ],
   "languages": [
-    { "name": "Português", "level": "Nativo",        "percent": 100 },
-    { "name": "Inglês",    "level": "Intermediário",  "percent": 60  }
+    {
+      "name": "Português",
+      "level": "Nativo",
+      "percent": 100
+    },
+    {
+      "name": "Inglês",
+      "level": "Intermediário",
+      "percent": 60
+    }
   ]
 }
