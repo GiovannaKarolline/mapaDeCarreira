@@ -618,7 +618,7 @@ a:hover {
 }
 
 .btn-ghost:hover {
-  border-color: var(--violet);
+  border-color: var(--surface);
   color: #fff;
   /* texto branco sobre fundo violeta — WCAG AA */
   background: var(--violet);
@@ -767,8 +767,8 @@ a:hover {
 .hero-photo {
   position: relative;
   z-index: 1;
-  width: 295px;
-  height: 295px;
+  width: 330px;
+  height: 330px;
   /* era 230px — foto maior */
   object-fit: cover;
   object-position: top center;
