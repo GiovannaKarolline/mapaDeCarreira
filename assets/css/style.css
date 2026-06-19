@@ -86,6 +86,32 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* ─── DARK MODE ─────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #12100e;
+    --surface: #1c1815;
+    --surface-2: #23201b;
+    --surface-3: #2a261f;
+    --ink: #f0ece2;
+    --ink-muted: #b5af9f;
+    --ink-faint: #7a7268;
+    --white: #f0ece2;
+
+    --border: rgba(139, 92, 246, .20);
+    --border-dark: rgba(139, 92, 246, .38);
+
+    --violet-pale: rgba(139, 92, 246, .14);
+    --violet-xpale: rgba(139, 92, 246, .08);
+    --amber-pale: rgba(217, 119, 6, .14);
+    --green-pale: rgba(16, 185, 129, .14);
+
+    --shadow-card: 0 2px 16px rgba(0, 0, 0, .35);
+    --shadow-lift: 0 8px 32px rgba(0, 0, 0, .50);
+    --shadow-violet: 0 4px 24px rgba(139, 92, 246, .28);
+  }
+}
+
 /* ─── RESET ───────────────────────────────── */
 *,
 *::before,
@@ -103,14 +129,40 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--page);
-  /* Padrão de pontos geométricos — textura suave */
-  background-image: radial-gradient(circle, rgba(91, 33, 182, .13) 1px, transparent 1px);
-  background-size: 28px 28px;
+  /* Grade diagonal geométrica — espaçamento maior, mais arejado */
+  background-image:
+    linear-gradient(rgba(91, 33, 182, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 33, 182, .06) 1px, transparent 1px);
+  background-size: 48px 48px;
   color: var(--ink);
   line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Camada de ruído grunge sobre o grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* Garante que todo conteúdo fique acima da camada de ruído */
+#navbar,
+#hero,
+main,
+footer,
+#scroll-top,
+.bg-particles {
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -137,6 +189,26 @@ a:hover {
 ::selection {
   background: rgba(91, 33, 182, .2);
   color: var(--ink);
+}
+
+/* Cursor geométrico — losango violeta */
+:root {
+  --cur: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpolygon points='11,2 20,11 11,20 2,11' fill='%235b21b6' opacity='.82'/%3E%3Cpolygon points='11,5 17,11 11,17 5,11' fill='none' stroke='white' stroke-width='.8' opacity='.5'/%3E%3C/svg%3E") 11 11, auto;
+}
+
+body {
+  cursor: var(--cur);
+}
+
+a,
+button,
+[role="button"],
+[tabindex],
+input[type="checkbox"],
+input[type="radio"],
+select,
+label {
+  cursor: var(--cur);
 }
 
 /* ─── SKIP LINK ───────────────────────────── */
@@ -181,6 +253,14 @@ a:hover {
 /* partícula diamante */
 .particle-dm {
   transform: rotate(45deg);
+}
+
+/* partícula linha (traço fino diagonal) */
+.particle-ln {
+  width: 1px !important;
+  height: 18px !important;
+  transform: rotate(calc(30deg + var(--r, 0deg)));
+  border-radius: 1px;
 }
 
 @keyframes float-up {
@@ -367,9 +447,42 @@ a:hover {
   color: var(--amber-light);
 }
 
-.nav-brand:hover {
-  text-decoration: none;
-  color: var(--violet-2);
+/* Glitch cromático no brand — sutil, 200ms */
+.nav-brand {
+  position: relative;
+  overflow: visible;
+}
+
+.nav-brand::before,
+.nav-brand::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 26px;
+  /* offset do nav-brand-geo (10px + 8px gap + 8px aprox) */
+  top: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s;
+}
+
+.nav-brand::before {
+  color: var(--amber-light);
+  transform: translate(-1.5px, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.nav-brand::after {
+  color: var(--violet-light);
+  transform: translate(1.5px, 0);
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.nav-brand:hover::before,
+.nav-brand:hover::after {
+  opacity: .45;
 }
 
 /* Links */
@@ -523,12 +636,28 @@ a:hover {
 
 .hero-nome-em {
   font-style: normal;
-  color: var(--violet);
-  /* efeito grunge: background clip com gradiente */
   background: var(--grad-violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  display: inline-block;
+}
+
+/* Sombra de impressão off-register (grunge) */
+.hero-nome-em::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  background: var(--grad-amber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: .22;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
 }
 
 /* Headline */
@@ -559,6 +688,19 @@ a:hover {
   margin-bottom: var(--s6);
   padding-left: var(--s5);
   border-left: 3px solid var(--violet);
+}
+
+/* Tagline estilo comentário de código */
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--amber);
+  letter-spacing: .04em;
+  margin-bottom: var(--s5);
+  margin-top: calc(-1 * var(--s3));
+  opacity: .85;
+  animation: hero-slide-up .45s var(--ease-out) .42s both;
 }
 
 /* Ações */
@@ -741,15 +883,44 @@ a:hover {
   z-index: 0;
 }
 
-/* Anel externo decorativo */
+/* Octágono externo decorativo */
 .photo-frame-deco-3 {
   position: absolute;
-  width: 355px;
-  height: 355px;
-  border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, .12);
+  width: 358px;
+  height: 358px;
+  border-radius: 0;
+  border: none;
   z-index: 0;
-  animation: ring-spin 40s linear infinite;
+  clip-path: polygon(30% 0%, 70% 0%,
+      100% 30%, 100% 70%,
+      70% 100%, 30% 100%,
+      0% 70%, 0% 30%);
+  outline: 1.5px dashed rgba(255, 255, 255, .18);
+  outline-offset: -1px;
+  animation: ring-spin 28s linear infinite;
+}
+
+/* Segundo octágono interno menor, rotação inversa */
+.photo-frame-deco-3::after {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  clip-path: polygon(30% 0%, 70% 0%,
+      100% 30%, 100% 70%,
+      70% 100%, 30% 100%,
+      0% 70%, 0% 30%);
+  outline: 1px dashed rgba(255, 255, 255, .09);
+  animation: ring-spin-reverse 40s linear infinite;
+}
+
+@keyframes ring-spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 /* Quadrado menor âmbar */
@@ -796,7 +967,13 @@ main {
 
 /* ─── SEÇÃO ───────────────────────────────── */
 .page-section {
-  padding: var(--s16) 0;
+  padding: calc(var(--s16) + clamp(20px, 4vw, 56px)) 0;
+  clip-path: polygon(0 clamp(20px, 4vw, 56px),
+      100% 0,
+      100% calc(100% - clamp(20px, 4vw, 56px)),
+      0 100%);
+  /* Compensa o clip nas seções adjacentes para não deixar gap */
+  margin-top: calc(-1 * clamp(20px, 4vw, 56px) / 2);
 }
 
 .page-section--alt {
@@ -804,6 +981,11 @@ main {
   /* Textura de pontos — sutil, reforça o padrão do body */
   background-image: radial-gradient(circle, rgba(91, 33, 182, .07) 1px, transparent 1px);
   background-size: 28px 28px;
+  clip-path: polygon(0 0,
+      100% clamp(20px, 4vw, 56px),
+      100% 100%,
+      0 calc(100% - clamp(20px, 4vw, 56px)));
+  margin-top: calc(-1 * clamp(20px, 4vw, 56px) / 2);
   /* diagonal no topo e base */
   clip-path: polygon(0 20px, 100% 0, 100% calc(100% - 20px), 0 100%);
   padding: calc(var(--s16) + 20px) 0;
@@ -912,6 +1094,16 @@ main {
   align-items: flex-start;
   box-shadow: var(--shadow-card);
   transition: box-shadow .3s, transform .3s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-corner-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  flex-shrink: 0;
 }
 
 .sobre-card:hover {
@@ -944,7 +1136,12 @@ main {
 .edu-card {
   background: var(--surface);
   border-left: 5px solid var(--violet);
-  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0,
+      calc(100% - 14px) 0,
+      100% 14px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px));
   padding: var(--s6) var(--s8);
   box-shadow: var(--shadow-card);
   display: flex;
@@ -1039,6 +1236,35 @@ main {
       transparent 6px,
       transparent 12px);
   opacity: .3;
+}
+
+/* ─── TIMELINE LINHA CONECTORA GRUNGE ────── */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: repeating-linear-gradient(to bottom,
+      var(--violet) 0px,
+      var(--violet) 5px,
+      transparent 5px,
+      transparent 11px);
+  /* Some no final — cria sensação de continuidade futura */
+  mask-image: linear-gradient(to bottom,
+      black 0%,
+      black 65%,
+      transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom,
+      black 0%,
+      black 65%,
+      transparent 100%);
+  pointer-events: none;
 }
 
 .timeline-item {
@@ -1315,7 +1541,12 @@ main {
 .cert-card {
   background: var(--surface);
   border-top: 4px solid var(--amber-light);
-  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0,
+      calc(100% - 14px) 0,
+      100% 14px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px));
   padding: var(--s6) var(--s6) var(--s5);
   box-shadow: var(--shadow-card);
   display: flex;
@@ -1534,7 +1765,20 @@ main {
 }
 
 .skill-bar-fill.filled::after {
-  opacity: .9;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  /* Scanlines horizontais estilo CRT passando pela barra */
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, .14) 2px,
+      rgba(255, 255, 255, .14) 4px);
+  animation: bar-shimmer 3s ease-in-out infinite;
+  animation-delay: 1.6s;
 }
 
 /* ─── OUTRAS COMPETÊNCIAS ─────────────────── */
@@ -1694,6 +1938,116 @@ main {
   transition: opacity .4s ease, visibility .4s ease;
   /* Fallback CSS puro: esconde após 8s se o JS não o fizer */
   animation: loading-css-fallback 0.5s ease 8s forwards;
+
+  /* Logo glitch no loader */
+  .loader-brand {
+    margin-bottom: 1.2rem;
+  }
+
+  .loader-brand-text {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    color: var(--violet);
+    position: relative;
+    display: inline-block;
+    animation: loader-glitch 3.5s ease-in-out infinite;
+  }
+
+  .loader-brand-text::before,
+  .loader-brand-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+  }
+
+  .loader-brand-text::before {
+    color: var(--amber-light);
+    transform: translate(-2px, 1px);
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    animation: loader-glitch-a 3.5s ease-in-out infinite;
+  }
+
+  .loader-brand-text::after {
+    color: var(--violet-light);
+    transform: translate(2px, -1px);
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    animation: loader-glitch-b 3.5s ease-in-out infinite;
+  }
+
+  @keyframes loader-glitch {
+
+    0%,
+    90%,
+    100% {
+      transform: translate(0);
+    }
+
+    92% {
+      transform: translate(-1px, 0);
+    }
+
+    94% {
+      transform: translate(1px, 0);
+    }
+
+    96% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes loader-glitch-a {
+
+    0%,
+    90%,
+    100% {
+      opacity: 0;
+      transform: translate(-2px, 1px);
+    }
+
+    91% {
+      opacity: .6;
+      transform: translate(-3px, 1px);
+    }
+
+    93% {
+      opacity: .4;
+      transform: translate(-1px, 0);
+    }
+
+    95% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes loader-glitch-b {
+
+    0%,
+    90%,
+    100% {
+      opacity: 0;
+      transform: translate(2px, -1px);
+    }
+
+    92% {
+      opacity: .5;
+      transform: translate(3px, -1px);
+    }
+
+    94% {
+      opacity: .3;
+      transform: translate(1px, 0);
+    }
+
+    96% {
+      opacity: 0;
+    }
+  }
 }
 
 @keyframes loading-css-fallback {
@@ -1770,21 +2124,58 @@ main {
   bottom: 2rem;
   right: 2rem;
   z-index: 200;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   background: var(--violet);
   color: #fff;
   border: none;
-  cursor: pointer;
-  font-size: 1rem;
+  cursor: var(--cur, pointer);
+  font-size: .9rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+  /* Losango completo — alinhado ao tema geométrico */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity .3s, transform .3s, box-shadow .2s;
+  transition: opacity .3s, transform .3s var(--ease-spring), box-shadow .2s;
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scroll-top:hover {
+  background: var(--violet-2);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: var(--shadow-violet);
+}
+
+/* Tooltip "Topo" ao hover */
+#scroll-top::after {
+  content: 'Topo';
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .65rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  background: var(--ink);
+  color: var(--white);
+  padding: 3px 8px;
+  clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s;
+}
+
+#scroll-top:hover::after {
+  opacity: 1;
 }
 
 #scroll-top.visible {
@@ -1804,7 +2195,10 @@ footer {
   text-align: center;
   padding: var(--s10) var(--s8) var(--s12);
   border-top: 1px solid rgba(91, 33, 182, .10);
-  background: var(--surface-3);
+  background-color: var(--surface-3);
+  /* Tile de losangos geométricos — reforça identidade da marca */
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='12,2 22,12 12,22 2,12' fill='none' stroke='%235b21b6' stroke-width='.7' opacity='.12'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
 }
 
 /* Barra gradiente no topo do footer */
@@ -1932,6 +2326,11 @@ footer::before {
     animation: slide-down .25s var(--ease-out);
   }
 
+  .photo-frame-deco-3 {
+    width: 298px;
+    height: 298px;
+  }
+
   .nav-links.open {
     display: flex;
   }
@@ -1978,8 +2377,13 @@ footer::before {
   }
 
   .page-section--alt {
-    clip-path: polygon(0 12px, 100% 0, 100% calc(100% - 12px), 0 100%);
-    padding: calc(var(--s12) + 12px) 0;
+    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0 calc(100% - 16px));
+    padding: calc(var(--s12) + 16px) 0;
+  }
+
+  .page-section {
+    clip-path: polygon(0 16px, 100% 0, 100% calc(100% - 16px), 0 100%);
+    padding: calc(var(--s12) + 16px) 0;
   }
 }
 

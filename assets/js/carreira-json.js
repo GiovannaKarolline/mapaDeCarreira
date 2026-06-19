@@ -81,14 +81,14 @@ var EMOJI_MAP = {
   '\uD83C\uDF93': 'graduation',  /* 🎓 */
   '\uD83D\uDCCB': 'clipboard',   /* 📋 */
   /* Certificações */
-  '\u2615':       'code',        /* ☕ */
+  '\u2615': 'code',        /* ☕ */
   '\u2601\uFE0F': 'cloud',       /* ☁️ */
   '\uD83D\uDEE1\uFE0F': 'shield',/* 🛡️ */
   '\uD83D\uDEE1': 'shield',      /* 🛡  (sem variante) */
   /* Carreira */
   '\uD83C\uDF31': 'seedling',    /* 🌱 */
   '\uD83D\uDE80': 'rocket',      /* 🚀 */
-  '\u2B50':       'star',        /* ⭐ */
+  '\u2B50': 'star',        /* ⭐ */
 };
 
 /*
@@ -97,8 +97,8 @@ var EMOJI_MAP = {
  */
 var getIconHTML = function (iconKey, fallbackKey) {
   if (!iconKey) return ICONS[fallbackKey || 'star'] || '';
-  if (ICONS[iconKey])        return ICONS[iconKey];          /* chave direta */
-  if (EMOJI_MAP[iconKey])    return ICONS[EMOJI_MAP[iconKey]]; /* emoji → chave */
+  if (ICONS[iconKey]) return ICONS[iconKey];          /* chave direta */
+  if (EMOJI_MAP[iconKey]) return ICONS[EMOJI_MAP[iconKey]]; /* emoji → chave */
   return ICONS[fallbackKey || 'star'] || '';                 /* fallback */
 };
 
@@ -125,54 +125,68 @@ var FALLBACK_DATA = {
     cvUrl: 'Curriculo_Giovanna_Ribeiro.PDF'
   },
   contacts: [
-    { label: '(11) 94926-4778',                    url: 'tel:+5511949264778',                             icon: 'phone'    },
-    { label: 'mennezes.giovanna@gmail.com',         url: 'mailto:mennezes.giovanna@gmail.com',             icon: 'email'    },
+    { label: '(11) 94926-4778', url: 'tel:+5511949264778', icon: 'phone' },
+    { label: 'mennezes.giovanna@gmail.com', url: 'mailto:mennezes.giovanna@gmail.com', icon: 'email' },
     { label: 'linkedin.com/in/giovanna-karolline', url: 'https://www.linkedin.com/in/giovanna-karolline', icon: 'linkedin' },
-    { label: 'github.com/GiovannaKarolline',       url: 'https://github.com/GiovannaKarolline',           icon: 'github'   }
+    { label: 'github.com/GiovannaKarolline', url: 'https://github.com/GiovannaKarolline', icon: 'github' }
   ],
   stats: [
-    { value: '2+', label: 'Anos de estudo'          },
-    { value: '3',  label: 'Certificacoes'           },
+    { value: '2+', label: 'Anos de estudo' },
+    { value: '3', label: 'Certificacoes' },
     { value: '7+', label: 'Linguagens e Frameworks' }
   ],
   education: [
     { course: 'Tecnologo em ADS', institution: 'IFSP', location: 'Sao Paulo', period: '03/2024 - 12/2026', status: 'Em andamento', icon: 'graduation' },
-    { course: 'Ensino Medio Tecnico em Logistica',     institution: 'IFSP', location: 'Sao Paulo', period: 'Concluido em 2023',  status: 'Concluido',    icon: 'clipboard'  }
+    { course: 'Ensino Medio Tecnico em Logistica', institution: 'IFSP', location: 'Sao Paulo', period: 'Concluido em 2023', status: 'Concluido', icon: 'clipboard' }
   ],
   certifications: [
-    { name: 'PROPROFISSAO - Instituto PROA', issuer: 'Instituto PROA',  area: 'Fullstack C# ASP.NET', status: 'Em andamento', icon: 'code'   },
-    { name: 'AWS Academy Data Engineering', issuer: 'Amazon Web Services', area: 'Engenharia de Dados', status: 'Concluido',    icon: 'cloud'  },
-    { name: 'Defesa de Redes',              issuer: 'Cisco',            area: 'Defesa de Redes',       status: 'Concluido',    icon: 'shield',
-      url: 'https://www.credly.com/badges/1935fef3-e074-4090-96bf-1cb4ce66e556/public_url' }
+    { name: 'PROPROFISSAO - Instituto PROA', issuer: 'Instituto PROA', area: 'Fullstack C# ASP.NET', status: 'Em andamento', icon: 'code' },
+    { name: 'AWS Academy Data Engineering', issuer: 'Amazon Web Services', area: 'Engenharia de Dados', status: 'Concluido', icon: 'cloud' },
+    {
+      name: 'Defesa de Redes', issuer: 'Cisco', area: 'Defesa de Redes', status: 'Concluido', icon: 'shield',
+      url: 'https://www.credly.com/badges/1935fef3-e074-4090-96bf-1cb4ce66e556/public_url'
+    }
   ],
   careerSteps: [
-    { title: 'Estudante & Estagiaria', period: 'Objetivo atual',            status: 'current', icon: 'seedling',
+    {
+      title: 'Estudante & Estagiaria', period: 'Objetivo atual', status: 'current', icon: 'seedling',
       description: 'Consolidacao de fundamentos. Projeto de extensao em Flutter/Dart com SCRUM e Figma.',
       softSkills: ['Comunicacao assertiva', 'Organizacao via SCRUM', 'Proatividade'],
-      roadmap: ['Flutter / Dart', 'ReactJS', 'Java', 'Python', 'Figma', 'SQL', 'Git & GitHub'] },
-    { title: 'Desenvolvedora Junior',  period: 'Proximo passo - 2026+',     status: 'next',    icon: 'rocket',
+      roadmap: ['Flutter / Dart', 'ReactJS', 'Java', 'Python', 'Figma', 'SQL', 'Git & GitHub']
+    },
+    {
+      title: 'Desenvolvedora Junior', period: 'Proximo passo - 2026+', status: 'next', icon: 'rocket',
       description: 'Atuacao fullstack, Java e Node.js, testes automatizados e documentacao profissional.',
       softSkills: ['Responsabilidade sobre entregas', 'Colaboracao em code reviews', 'Comunicacao tecnica'],
-      roadmap: ['Spring Boot', 'Node.js', 'APIs REST', 'Testes Automatizados', 'PostgreSQL', 'Docker', 'CI/CD'] },
-    { title: 'Lideranca Tecnica',      period: 'Objetivo de longo prazo',   status: 'next',    icon: 'star',
+      roadmap: ['Spring Boot', 'Node.js', 'APIs REST', 'Testes Automatizados', 'PostgreSQL', 'Docker', 'CI/CD']
+    },
+    {
+      title: 'Lideranca Tecnica', period: 'Objetivo de longo prazo', status: 'next', icon: 'star',
       description: 'Arquitetura de sistemas, orientacao de equipes e decisoes tecnicas com visao sistemica.',
       softSkills: ['Mentoria com escuta ativa', 'Visao sistemica', 'Facilitacao de ambientes seguros'],
-      roadmap: ['Arquitetura de Software', 'Cloud AWS', 'Engenharia de Dados', 'Seguranca', 'Gestao de Pessoas'] }
+      roadmap: ['Arquitetura de Software', 'Cloud AWS', 'Engenharia de Dados', 'Seguranca', 'Gestao de Pessoas']
+    }
   ],
   skillGroups: [
-    { title: 'Linguagens',           icon: '</>',
-      skills: [{ name: 'JavaScript / HTML / CSS', level: 80 }, { name: 'Java', level: 65 }, { name: 'Python', level: 60 }, { name: 'C', level: 50 }] },
-    { title: 'Frameworks & Libs',    icon: '[*]',
-      skills: [{ name: 'ReactJS', level: 70 }, { name: 'C#', level: 65 }, { name: 'Bootstrap', level: 75 }, { name: 'Flask', level: 50 }] },
-    { title: 'Ferramentas & Metodos', icon: '{#}',
-      skills: [{ name: 'Git & GitHub', level: 80 }, { name: 'SQL', level: 65 }, { name: 'Figma', level: 60 }, { name: 'SCRUM / Agile', level: 70 }] }
+    {
+      title: 'Linguagens', icon: '</>',
+      skills: [{ name: 'JavaScript / HTML / CSS', level: 80 }, { name: 'Java', level: 65 }, { name: 'Python', level: 60 }, { name: 'C', level: 50 }]
+    },
+    {
+      title: 'Frameworks & Libs', icon: '[*]',
+      skills: [{ name: 'ReactJS', level: 70 }, { name: 'C#', level: 65 }, { name: 'Bootstrap', level: 75 }, { name: 'Flask', level: 50 }]
+    },
+    {
+      title: 'Ferramentas & Metodos', icon: '{#}',
+      skills: [{ name: 'Git & GitHub', level: 80 }, { name: 'SQL', level: 65 }, { name: 'Figma', level: 60 }, { name: 'SCRUM / Agile', level: 70 }]
+    }
   ],
   otherSkills: ['Logica de programacao', 'Versionamento de codigo', 'Gestao de requisitos',
-                'Documentacao tecnica',  'Diagramas UML',           'Comunicacao assertiva',
-                'Trabalho em equipe',    'AWS',                     'Linux'],
+    'Documentacao tecnica', 'Diagramas UML', 'Comunicacao assertiva',
+    'Trabalho em equipe', 'AWS', 'Linux'],
   languages: [
-    { name: 'Portugues', level: 'Nativo',       percent: 100 },
-    { name: 'Ingles',    level: 'Intermediario', percent: 60  }
+    { name: 'Portugues', level: 'Nativo', percent: 100 },
+    { name: 'Ingles', level: 'Intermediario', percent: 60 }
   ]
 };
 
@@ -193,10 +207,10 @@ const byId = (id) => document.getElementById(id);
    ══════════════════════════════════════════════ */
 const countUp = (targetEl, endVal, suffix) => {
   const duration = 1400;
-  const start    = performance.now();
+  const start = performance.now();
   const step = (now) => {
     const progress = Math.min((now - start) / duration, 1);
-    const eased    = 1 - Math.pow(1 - progress, 3);
+    const eased = 1 - Math.pow(1 - progress, 3);
     targetEl.textContent = Math.floor(eased * endVal) + suffix;
     if (progress < 1) requestAnimationFrame(step);
   };
@@ -211,8 +225,8 @@ const hideLoading = () => {
     const loading = byId('loading');
     if (!loading) return;
     loading.classList.add('hidden');
-    loading.style.opacity       = '0';
-    loading.style.visibility    = 'hidden';
+    loading.style.opacity = '0';
+    loading.style.visibility = 'hidden';
     loading.style.pointerEvents = 'none';
     setTimeout(function () {
       if (loading.parentNode) loading.parentNode.removeChild(loading);
@@ -233,23 +247,29 @@ const initParticles = () => {
   const shapes = [
     { cls: 'particle particle-sq', bg: '#5b21b6' },
     { cls: 'particle particle-dm', bg: '#b45309' },
+    { cls: 'particle particle-ln', bg: '#5b21b6' },
     { cls: 'particle particle-sq', bg: '#0f6b4d' },
     { cls: 'particle particle-dm', bg: '#7c3aed' },
+    { cls: 'particle particle-ln', bg: '#d97706' },
     { cls: 'particle particle-sq', bg: '#d97706' },
   ];
 
   const COUNT = 8;
   for (let i = 0; i < COUNT; i++) {
-    const sh       = shapes[i % shapes.length];
-    const p        = document.createElement('div');
-    p.className    = sh.cls;
-    const size     = Math.random() * 6 + 2;
-    const left     = Math.random() * 100;
+    const sh = shapes[i % shapes.length];
+    const p = document.createElement('div');
+    p.className = sh.cls;
+    const isLine = sh.cls.includes('particle-ln');
+    const size = isLine ? 1 : Math.random() * 6 + 2;
+    const rotation = Math.floor(Math.random() * 60);
+    const left = Math.random() * 100;
     const duration = Math.random() * 35 + 35;
-    const delay    = Math.random() * -duration;
-    const opacity  = Math.random() * 0.09 + 0.04;
-    p.style.cssText = `width:${size}px;height:${size}px;left:${left}%;background:${sh.bg};` +
-                      `opacity:${opacity};animation-duration:${duration}s;animation-delay:${delay}s;`;
+    const delay = Math.random() * -duration;
+    const opacity = Math.random() * 0.09 + 0.04;
+    const height = isLine ? 18 : size;
+    p.style.cssText = `width:${size}px;height:${height}px;left:${left}%;background:${sh.bg};` +
+      `--r:${rotation}deg;` +
+      `opacity:${opacity};animation-duration:${duration}s;animation-delay:${delay}s;`;
     container.appendChild(p);
   }
 };
@@ -259,7 +279,7 @@ const initParticles = () => {
    BUG FIX: NAV_IDS declarado ANTES de onScroll()
    ══════════════════════════════════════════════ */
 const initNavbar = () => {
-  const navbar  = byId('navbar');
+  const navbar = byId('navbar');
   const menuBtn = byId('menu-btn');
   const navMenu = byId('nav-links');
 
@@ -365,7 +385,7 @@ const initCounters = () => {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (!e.isIntersecting) return;
-      const el2    = e.target;
+      const el2 = e.target;
       const endVal = parseInt(el2.dataset.target || '0', 10);
       const suffix = el2.dataset.suffix || '';
       countUp(el2, endVal, suffix);
@@ -379,10 +399,10 @@ const initCounters = () => {
    INICIALIZAR ANIMAÇÕES DE SCROLL
    ══════════════════════════════════════════════ */
 const initAnimations = () => {
-  observeAll('.timeline-item',  (n) => n.classList.add('animate-in'));
-  observeAll('.skill-card',     (n) => n.classList.add('animate-in'));
-  observeAll('.edu-card',       (n) => n.classList.add('animate-in'));
-  observeAll('.cert-card',      (n) => n.classList.add('animate-in'));
+  observeAll('.timeline-item', (n) => n.classList.add('animate-in'));
+  observeAll('.skill-card', (n) => n.classList.add('animate-in'));
+  observeAll('.edu-card', (n) => n.classList.add('animate-in'));
+  observeAll('.cert-card', (n) => n.classList.add('animate-in'));
   observeAll('.animate-target', (n) => n.classList.add('animate-in'));
   animateBars();
   initCounters();
@@ -403,10 +423,10 @@ const renderMeta = ({ seo, profile }) => {
     m.content = val;
     document.head.appendChild(m);
   };
-  if (seo.author)       addMeta('author', seo.author);
-  if (seo.title)        addMeta('og:title',       seo.title,       true);
-  if (seo.description)  addMeta('og:description', seo.description, true);
-  if (profile && profile.photo) addMeta('og:image', profile.photo,  true);
+  if (seo.author) addMeta('author', seo.author);
+  if (seo.title) addMeta('og:title', seo.title, true);
+  if (seo.description) addMeta('og:description', seo.description, true);
+  if (profile && profile.photo) addMeta('og:image', profile.photo, true);
   if (seo.canonicalUrl) {
     const link = document.createElement('link');
     link.rel = 'canonical'; link.href = seo.canonicalUrl;
@@ -423,428 +443,465 @@ const renderProfile = ({ profile, contacts, stats }) => {
   /* Nome */
   const fn = byId('profile-name-first');
   const ln = byId('profile-name-last');
-  if (fn && profile.name)     fn.textContent = profile.name;
-  if (ln && profile.lastName) ln.textContent = profile.lastName;
+  if (fn && profile.name) fn.textContent = profile.name;
+  if (ln && profile.lastName) {
+    ln.textContent = profile.lastName;
+    ln.dataset.text = profile.lastName; /* suporta pseudo-elemento ::before grunge */
+  }
 
-  /* Headline */
+  /* Headline com efeito typewriter */
   const hl = byId('profile-headline');
-  if (hl && profile.headline) hl.textContent = profile.headline;
-
-  /* Localização — preserva o ícone ◈ já no DOM */
-  const loc = byId('profile-location');
-  if (loc && profile.location) {
-    Array.from(loc.childNodes).forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE) loc.removeChild(node);
-    });
-    loc.appendChild(document.createTextNode(' ' + profile.location));
-  }
-
-  /* Objetivo / Summary */
-  const obj = byId('profile-objective');
-  if (obj && profile.objective) obj.textContent = profile.objective;
-
-  const summ = byId('profile-summary');
-  if (summ && profile.summary) summ.textContent = profile.summary;
-
-  /* Foto */
-  const photo = byId('profile-photo');
-  if (photo) { photo.src = profile.photo; photo.alt = profile.photoAlt || ''; }
-
-  /* Links de CV */
-  [byId('cv-link'), byId('nav-cv-link')].forEach((a) => {
-    if (!a) return;
-    a.href = profile.cvUrl || '#';
-    a.setAttribute('aria-label', 'Baixar curriculo de ' + (profile.name || '') + ' em PDF');
-  });
-
-  /* Stats com contador */
-  const statsEl = byId('hero-stats');
-  if (statsEl && Array.isArray(stats)) {
-    statsEl.innerHTML = '';
-    stats.forEach(({ value, label }) => {
-      const chip   = el('div', 'stat-chip');
-      chip.setAttribute('aria-label', label + ': ' + value);
-
-      const m      = String(value).match(/^(\d+)(\+?)$/);
-      const num    = m ? parseInt(m[1], 10) : 0;
-      const suffix = m ? m[2] : '';
-
-      const valueEl = el('span', 'stat-value', '0');
-      valueEl.setAttribute('data-target', num);
-      valueEl.setAttribute('data-suffix', suffix);
-
-      chip.appendChild(valueEl);
-      chip.appendChild(el('span', 'stat-label', label));
-      statsEl.appendChild(chip);
-    });
-  }
-
-  /* Contatos com ícones SVG */
-  const contactList = byId('contact-list');
-  if (contactList && Array.isArray(contacts)) {
-    contactList.innerHTML = '';
-    contacts.forEach(({ label, url, icon }) => {
-      const li = el('li');
-      const a  = el('a', 'contact-link');
-      a.href   = url || '#';
-      if ((url || '').startsWith('http')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
-      a.setAttribute('aria-label', label);
-
-      const iconEl      = el('span', 'contact-icon');
-      iconEl.innerHTML  = getIconHTML(icon, 'email');
-      const labelEl     = el('span', 'contact-label', label);
-
-      a.appendChild(iconEl);
-      a.appendChild(labelEl);
-      li.appendChild(a);
-      contactList.appendChild(li);
-    });
-  }
-};
-
-/* ══════════════════════════════════════════════
-   RENDER: EDUCAÇÃO
-   ══════════════════════════════════════════════ */
-const renderEducation = (education) => {
-  const container = byId('education-list');
-  if (!container || !Array.isArray(education)) return;
-  container.innerHTML = '';
-
-  education.forEach((item, i) => {
-    const card = el('div', 'edu-card');
-    card.style.transitionDelay = (i * 0.12) + 's';
-
-    const icon = el('div', 'edu-icon');
-    icon.innerHTML = getIconHTML(item.icon, 'graduation');
-    icon.setAttribute('aria-hidden', 'true');
-
-    const body   = el('div', 'edu-body');
-    const course = el('p', 'edu-course', item.course);
-    const inst   = el('p', 'edu-institution', item.institution);
-    const meta   = el('div', 'edu-meta');
-    const period = el('span', 'edu-period', item.period);
-
-    const done = (item.status || '').toLowerCase().startsWith('conclu');
-    const status = el('span',
-      done ? 'edu-status edu-status--concluido' : 'edu-status edu-status--andamento',
-      item.status
-    );
-
-    meta.appendChild(period);
-    meta.appendChild(status);
-    body.appendChild(course);
-    body.appendChild(inst);
-    body.appendChild(meta);
-    card.appendChild(icon);
-    card.appendChild(body);
-    container.appendChild(card);
-  });
-};
-
-/* ══════════════════════════════════════════════
-   RENDER: CERTIFICAÇÕES
-   ══════════════════════════════════════════════ */
-const renderCertifications = (certifications) => {
-  const container = byId('cert-grid');
-  if (!container || !Array.isArray(certifications)) return;
-  container.innerHTML = '';
-
-  certifications.forEach((cert, i) => {
-    const card = el('div', 'cert-card');
-    card.style.transitionDelay = (i * 0.12) + 's';
-
-    const iconWrap = el('div', 'cert-icon-wrap');
-    iconWrap.innerHTML = getIconHTML(cert.icon, 'shield');
-    iconWrap.setAttribute('aria-hidden', 'true');
-
-    const name   = el('p', 'cert-name',   cert.name);
-    const issuer = el('p', 'cert-issuer', cert.issuer);
-    const area   = el('p', 'cert-area',   cert.area);
-
-    const footer = el('div', 'cert-status-wrap');
-    const done   = (cert.status || '').toLowerCase().startsWith('conclu');
-    const status = el('span',
-      done ? 'cert-status cert-status--concluido' : 'cert-status cert-status--andamento',
-      cert.status
-    );
-    footer.appendChild(status);
-
-    if (cert.url) {
-      const link = el('a', 'cert-link', 'Ver badge \u2197');
-      link.href   = cert.url;
-      link.target = '_blank';
-      link.rel    = 'noopener noreferrer';
-      link.setAttribute('aria-label', 'Ver badge de ' + cert.name + ' no Credly');
-      footer.appendChild(link);
+  if (hl && profile.headline) {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      hl.textContent = profile.headline;
+    } else {
+      hl.textContent = '';
+      hl.setAttribute('aria-label', profile.headline);
+      const fullText = profile.headline;
+      let idx = 0;
+      const tick = () => {
+        hl.textContent += fullText[idx++];
+        if (idx < fullText.length) setTimeout(tick, 62);
+      };
+      /* Inicia após as animações de entrada do hero (600ms) */
+      setTimeout(tick, 620);
     }
 
-    card.appendChild(iconWrap);
-    card.appendChild(name);
-    card.appendChild(issuer);
-    card.appendChild(area);
-    card.appendChild(footer);
-    container.appendChild(card);
-  });
-};
-
-/* ══════════════════════════════════════════════
-   RENDER: TIMELINE DE CARREIRA
-   ══════════════════════════════════════════════ */
-const renderTimeline = (careerSteps) => {
-  const timeline = byId('career-timeline');
-  if (!timeline || !Array.isArray(careerSteps)) return;
-  timeline.innerHTML = '';
-
-  const STATUS_LABELS = { completed: 'Concluido', current: 'Etapa atual', next: 'Proximo passo' };
-
-  careerSteps.forEach((step, i) => {
-    const item = el('article', 'timeline-item');
-    item.setAttribute('role', 'listitem');
-    item.setAttribute('aria-labelledby', 'career-' + i);
-    item.style.transitionDelay = (i * 0.1) + 's';
-
-    const diamond = el('div', 'timeline-diamond ' + (step.status || 'next'));
-    diamond.setAttribute('aria-hidden', 'true');
-
-    const card   = el('div', 'timeline-card' + (step.status === 'current' ? ' current' : ''));
-    const header = el('div', 'timeline-card-header');
-
-    const icon = el('span', 'timeline-icon');
-    icon.innerHTML = getIconHTML(step.icon, 'star');
-    icon.setAttribute('aria-hidden', 'true');
-
-    const meta   = el('div', 'timeline-meta');
-    const title  = el('h3', 'timeline-title', step.title);
-    title.id     = 'career-' + i;
-    const period = el('p', 'timeline-period', step.period || '');
-    meta.appendChild(title);
-    meta.appendChild(period);
-
-    const statusLabel = STATUS_LABELS[step.status] || step.status || '';
-    const badge = el('span', 'timeline-status status-' + (step.status || 'next'), statusLabel);
-    badge.setAttribute('aria-label', 'Status: ' + statusLabel);
-
-    header.appendChild(icon);
-    header.appendChild(meta);
-    header.appendChild(badge);
-
-    const desc = el('p', 'timeline-description', step.description || '');
-
-    const toggleBtn = el('button', 'toggle-btn');
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.setAttribute('aria-controls', 'detail-' + i);
-    const btnTxt   = el('span', '', 'Ver detalhes');
-    const btnArrow = el('span', 'arrow', ' \u25BE');
-    toggleBtn.appendChild(btnTxt);
-    toggleBtn.appendChild(btnArrow);
-
-    const detail = el('div', 'timeline-details');
-    detail.id    = 'detail-' + i;
-    detail.setAttribute('aria-hidden', 'true');
-
-    detail.appendChild(el('p', 'details-section-title', 'Soft Skills desta etapa'));
-    const softList = el('ul', 'soft-skill-list');
-    (step.softSkills || []).forEach((s) => softList.appendChild(el('li', 'soft-skill-item', s)));
-    detail.appendChild(softList);
-
-    detail.appendChild(el('p', 'details-section-title', 'Roadmap de aprendizado'));
-    const badges = el('div', 'roadmap-badges');
-    (step.roadmap || []).forEach((t) => badges.appendChild(el('span', 'roadmap-badge', t)));
-    detail.appendChild(badges);
-
-    toggleBtn.addEventListener('click', () => {
-      const open = detail.classList.toggle('open');
-      toggleBtn.classList.toggle('open', open);
-      toggleBtn.setAttribute('aria-expanded', String(open));
-      detail.setAttribute('aria-hidden', String(!open));
-      btnTxt.textContent = open ? 'Ocultar detalhes' : 'Ver detalhes';
-    });
-
-    card.appendChild(header);
-    card.appendChild(desc);
-    card.appendChild(toggleBtn);
-    card.appendChild(detail);
-    item.appendChild(diamond);
-    item.appendChild(card);
-    timeline.appendChild(item);
-  });
-};
-
-/* ══════════════════════════════════════════════
-   RENDER: HABILIDADES
-   ══════════════════════════════════════════════ */
-const renderSkills = ({ skillGroups, otherSkills }) => {
-  const container = byId('skill-groups');
-  if (container && Array.isArray(skillGroups)) {
-    container.innerHTML = '';
-    skillGroups.forEach((group, gi) => {
-      const card = el('div', 'skill-card');
-      card.setAttribute('role', 'listitem');
-      card.style.transitionDelay = (gi * 0.1) + 's';
-
-      const header = el('div', 'skill-card-header');
-      const icon   = el('span', 'skill-card-icon', group.icon || '\u25C8');
-      icon.setAttribute('aria-hidden', 'true');
-      header.appendChild(icon);
-      header.appendChild(el('p', 'skill-card-title', group.title));
-      card.appendChild(header);
-
-      (group.skills || []).forEach((skill) => {
-        const item   = el('div', 'skill-item');
-        const row    = el('div', 'skill-row');
-        row.appendChild(el('span', 'skill-name',    skill.name));
-        row.appendChild(el('span', 'skill-percent', skill.level + '%'));
-
-        const track = el('div', 'skill-bar-track');
-        track.setAttribute('role', 'progressbar');
-        track.setAttribute('aria-label', skill.name + ': ' + skill.level + '%');
-        track.setAttribute('aria-valuenow',  skill.level);
-        track.setAttribute('aria-valuemin',  '0');
-        track.setAttribute('aria-valuemax',  '100');
-
-        const fill = el('div', 'skill-bar-fill');
-        fill.dataset.level = skill.level;
-
-        track.appendChild(fill);
-        item.appendChild(row);
-        item.appendChild(track);
-        card.appendChild(item);
+    /* Localização — preserva o ícone ◈ já no DOM */
+    const loc = byId('profile-location');
+    if (loc && profile.location) {
+      Array.from(loc.childNodes).forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE) loc.removeChild(node);
       });
+      loc.appendChild(document.createTextNode(' ' + profile.location));
+    }
 
-      container.appendChild(card);
+    /* Objetivo / Summary */
+    const obj = byId('profile-objective');
+    if (obj && profile.objective) obj.textContent = profile.objective;
+
+    /* Tagline */
+    const tgl = byId('profile-tagline');
+    if (tgl && profile.tagline) tgl.textContent = profile.tagline;
+
+    const summ = byId('profile-summary');
+    if (summ && profile.summary) summ.textContent = profile.summary;
+
+    /* Foto */
+    const photo = byId('profile-photo');
+    if (photo) { photo.src = profile.photo; photo.alt = profile.photoAlt || ''; }
+
+    /* Links de CV */
+    [byId('cv-link'), byId('nav-cv-link')].forEach((a) => {
+      if (!a) return;
+      a.href = profile.cvUrl || '#';
+      a.setAttribute('aria-label', 'Baixar curriculo de ' + (profile.name || '') + ' em PDF');
     });
-  }
 
-  const otherList = byId('other-skills');
-  if (otherList && Array.isArray(otherSkills)) {
-    otherList.innerHTML = '';
-    otherSkills.forEach((skill) => {
-      const li    = el('li');
-      const badge = el('span', 'other-skill-badge', skill);
-      li.appendChild(badge);
-      otherList.appendChild(li);
-    });
-  }
-};
+    /* Stats com contador */
+    const statsEl = byId('hero-stats');
+    if (statsEl && Array.isArray(stats)) {
+      statsEl.innerHTML = '';
+      stats.forEach(({ value, label }) => {
+        const chip = el('div', 'stat-chip');
+        chip.setAttribute('aria-label', label + ': ' + value);
 
-/* ══════════════════════════════════════════════
-   RENDER: IDIOMAS
-   ══════════════════════════════════════════════ */
-const renderLanguages = (languages) => {
-  const list = byId('language-list');
-  if (!list || !Array.isArray(languages)) return;
-  list.innerHTML = '';
+        const m = String(value).match(/^(\d+)(\+?)$/);
+        const num = m ? parseInt(m[1], 10) : 0;
+        const suffix = m ? m[2] : '';
 
-  languages.forEach((lang) => {
-    const item = el('li', 'language-item');
+        const valueEl = el('span', 'stat-value', '0');
+        valueEl.setAttribute('data-target', num);
+        valueEl.setAttribute('data-suffix', suffix);
 
-    const header = el('div', 'language-header');
-    header.appendChild(el('span', 'language-name',  lang.name));
-    header.appendChild(el('span', 'language-level', lang.level));
+        chip.appendChild(valueEl);
+        chip.appendChild(el('span', 'stat-label', label));
+        statsEl.appendChild(chip);
+      });
+    }
 
-    const track = el('div', 'language-bar-track');
-    track.setAttribute('role', 'progressbar');
-    track.setAttribute('aria-label',   lang.name + ': ' + lang.level);
-    track.setAttribute('aria-valuenow', lang.percent || 0);
-    track.setAttribute('aria-valuemin', '0');
-    track.setAttribute('aria-valuemax', '100');
+    /* Contatos com ícones SVG */
+    const contactList = byId('contact-list');
+    if (contactList && Array.isArray(contacts)) {
+      contactList.innerHTML = '';
+      contacts.forEach(({ label, url, icon }) => {
+        const li = el('li');
+        const a = el('a', 'contact-link');
+        a.href = url || '#';
+        if ((url || '').startsWith('http')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+        a.setAttribute('aria-label', label);
 
-    const fill = el('div', 'language-bar-fill');
-    fill.dataset.level = lang.percent || 0;
+        const iconEl = el('span', 'contact-icon');
+        iconEl.innerHTML = getIconHTML(icon, 'email');
+        const labelEl = el('span', 'contact-label', label);
 
-    track.appendChild(fill);
-    item.appendChild(header);
-    item.appendChild(track);
-    list.appendChild(item);
-  });
-};
-
-/* ══════════════════════════════════════════════
-   RENDER: PÁGINA COMPLETA
-   ══════════════════════════════════════════════ */
-const renderPage = (data) => {
-  try { renderMeta(data);                          } catch (e) { console.error('[render] Meta:',    e); }
-  try { renderProfile(data);                       } catch (e) { console.error('[render] Profile:', e); }
-  try { renderEducation(data.education);           } catch (e) { console.error('[render] Edu:',     e); }
-  try { renderTimeline(data.careerSteps);          } catch (e) { console.error('[render] Timeline:',e); }
-  try { renderCertifications(data.certifications); } catch (e) { console.error('[render] Certs:',   e); }
-  try { renderSkills(data);                        } catch (e) { console.error('[render] Skills:',  e); }
-  try { renderLanguages(data.languages);           } catch (e) { console.error('[render] Langs:',   e); }
-
-  requestAnimationFrame(() => requestAnimationFrame(initAnimations));
-};
-
-/* ══════════════════════════════════════════════
-   MENSAGEM DE ERRO INLINE
-   ══════════════════════════════════════════════ */
-const showError = (msg) => {
-  const main = byId('conteudo-principal');
-  if (!main) return;
-  const box = el('div');
-  box.style.cssText = [
-    'margin:2rem auto', 'max-width:640px', 'padding:1.5rem 2rem',
-    'background:rgba(180,83,9,.06)', 'border-left:4px solid #b45309',
-    "font-family:'Fira Code',monospace", 'font-size:.84rem',
-    'line-height:1.7', 'color:#78350f', 'white-space:pre-wrap',
-    'clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)'
-  ].join(';');
-  box.setAttribute('role', 'alert');
-  box.textContent = msg;
-  main.prepend(box);
-};
-
-/* ══════════════════════════════════════════════
-   BOOTSTRAP — INICIALIZAÇÃO
-   ══════════════════════════════════════════════ */
-try { initParticles(); } catch (e) { console.error('[bootstrap] particles:', e); }
-try { initNavbar();    } catch (e) { console.error('[bootstrap] navbar:',    e); }
-try { initScrollTop(); } catch (e) { console.error('[bootstrap] scrolltop:', e); }
-
-/* Safety timeout: esconde loading mesmo se o fetch/render travar */
-const _loadingTimeout = setTimeout(function () {
-  hideLoading();
-  console.warn('[carreira-json] Safety timeout acionado.');
-}, 5000);
-
-/*
- * CARREGAMENTO DOS DADOS
- * Tenta buscar assets/data/carreira.json (fonte de verdade editada pelo usuário).
- * Se o fetch falhar (CORS, arquivo inexistente, offline), usa FALLBACK_DATA.
- */
-(function loadData() {
-  const finalize = (data) => {
-    try {
-      if (!data || typeof data !== 'object') throw new Error('Dados inválidos.');
-      renderPage(data);
-      clearTimeout(_loadingTimeout);
-      if (window._loadingFailsafe) clearTimeout(window._loadingFailsafe);
-      hideLoading();
-    } catch (err) {
-      clearTimeout(_loadingTimeout);
-      hideLoading();
-      try { showError('\u26A0\uFE0F  Erro ao renderizar: ' + err.message); } catch (_) {}
-      console.error('[carreira-json] Erro fatal no render:', err);
+        a.appendChild(iconEl);
+        a.appendChild(labelEl);
+        li.appendChild(a);
+        contactList.appendChild(li);
+      });
     }
   };
 
-  /* Tenta fetch do JSON externo */
-  if (typeof fetch !== 'undefined') {
-    fetch('assets/data/carreira.json')
-      .then((res) => {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then((data) => {
-        console.info('[carreira-json] Dados carregados de carreira.json');
-        finalize(data);
-      })
-      .catch((err) => {
-        console.warn('[carreira-json] Fetch falhou, usando fallback embutido.', err.message);
-        finalize(FALLBACK_DATA);
+  /* ══════════════════════════════════════════════
+     RENDER: EDUCAÇÃO
+     ══════════════════════════════════════════════ */
+  const renderEducation = (education) => {
+    const container = byId('education-list');
+    if (!container || !Array.isArray(education)) return;
+    container.innerHTML = '';
+
+    education.forEach((item, i) => {
+      const card = el('div', 'edu-card');
+      card.style.transitionDelay = (i * 0.12) + 's';
+
+      const icon = el('div', 'edu-icon');
+      icon.innerHTML = getIconHTML(item.icon, 'graduation');
+      icon.setAttribute('aria-hidden', 'true');
+
+      const body = el('div', 'edu-body');
+      const course = el('p', 'edu-course', item.course);
+      const inst = el('p', 'edu-institution', item.institution);
+      const meta = el('div', 'edu-meta');
+      const period = el('span', 'edu-period', item.period);
+
+      const done = (item.status || '').toLowerCase().startsWith('conclu');
+      const status = el('span',
+        done ? 'edu-status edu-status--concluido' : 'edu-status edu-status--andamento',
+        item.status
+      );
+
+      meta.appendChild(period);
+      meta.appendChild(status);
+      body.appendChild(course);
+      body.appendChild(inst);
+      body.appendChild(meta);
+      card.appendChild(icon);
+      card.appendChild(body);
+      container.appendChild(card);
+    });
+  };
+
+  /* ══════════════════════════════════════════════
+     RENDER: CERTIFICAÇÕES
+     ══════════════════════════════════════════════ */
+  const renderCertifications = (certifications) => {
+    const container = byId('cert-grid');
+    if (!container || !Array.isArray(certifications)) return;
+    container.innerHTML = '';
+
+    certifications.forEach((cert, i) => {
+      const card = el('div', 'cert-card');
+      card.style.transitionDelay = (i * 0.12) + 's';
+
+      const iconWrap = el('div', 'cert-icon-wrap');
+      iconWrap.innerHTML = getIconHTML(cert.icon, 'shield');
+      iconWrap.setAttribute('aria-hidden', 'true');
+
+      const name = el('p', 'cert-name', cert.name);
+      const issuer = el('p', 'cert-issuer', cert.issuer);
+      const area = el('p', 'cert-area', cert.area);
+
+      const footer = el('div', 'cert-status-wrap');
+      const done = (cert.status || '').toLowerCase().startsWith('conclu');
+      const status = el('span',
+        done ? 'cert-status cert-status--concluido' : 'cert-status cert-status--andamento',
+        cert.status
+      );
+      footer.appendChild(status);
+
+      if (cert.url) {
+        const link = el('a', 'cert-link', 'Ver badge \u2197');
+        link.href = cert.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'Ver badge de ' + cert.name + ' no Credly');
+        footer.appendChild(link);
+      }
+
+      card.appendChild(iconWrap);
+      card.appendChild(name);
+      card.appendChild(issuer);
+      card.appendChild(area);
+      card.appendChild(footer);
+      container.appendChild(card);
+    });
+  };
+
+  /* ══════════════════════════════════════════════
+     RENDER: TIMELINE DE CARREIRA
+     ══════════════════════════════════════════════ */
+  const renderTimeline = (careerSteps) => {
+    const timeline = byId('career-timeline');
+    if (!timeline || !Array.isArray(careerSteps)) return;
+    timeline.innerHTML = '';
+
+    const STATUS_LABELS = { completed: 'Concluido', current: 'Etapa atual', next: 'Proximo passo' };
+
+    careerSteps.forEach((step, i) => {
+      const item = el('article', 'timeline-item');
+      item.setAttribute('role', 'listitem');
+      item.setAttribute('aria-labelledby', 'career-' + i);
+      item.style.transitionDelay = (i * 0.1) + 's';
+
+      const diamond = el('div', 'timeline-diamond ' + (step.status || 'next'));
+      diamond.setAttribute('aria-hidden', 'true');
+
+      const card = el('div', 'timeline-card' + (step.status === 'current' ? ' current' : ''));
+      const header = el('div', 'timeline-card-header');
+
+      const icon = el('span', 'timeline-icon');
+      icon.innerHTML = getIconHTML(step.icon, 'star');
+      icon.setAttribute('aria-hidden', 'true');
+
+      const meta = el('div', 'timeline-meta');
+      const title = el('h3', 'timeline-title', step.title);
+      title.id = 'career-' + i;
+      const period = el('p', 'timeline-period', step.period || '');
+      meta.appendChild(title);
+      meta.appendChild(period);
+
+      const statusLabel = STATUS_LABELS[step.status] || step.status || '';
+      const badge = el('span', 'timeline-status status-' + (step.status || 'next'), statusLabel);
+      badge.setAttribute('aria-label', 'Status: ' + statusLabel);
+
+      header.appendChild(icon);
+      header.appendChild(meta);
+      header.appendChild(badge);
+
+      const desc = el('p', 'timeline-description', step.description || '');
+
+      const toggleBtn = el('button', 'toggle-btn');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-controls', 'detail-' + i);
+      const btnTxt = el('span', '', 'Ver detalhes');
+      const btnArrow = el('span', 'arrow', ' \u25BE');
+      toggleBtn.appendChild(btnTxt);
+      toggleBtn.appendChild(btnArrow);
+
+      const detail = el('div', 'timeline-details');
+      detail.id = 'detail-' + i;
+      detail.setAttribute('aria-hidden', 'true');
+
+      detail.appendChild(el('p', 'details-section-title', 'Soft Skills desta etapa'));
+      const softList = el('ul', 'soft-skill-list');
+      (step.softSkills || []).forEach((s) => softList.appendChild(el('li', 'soft-skill-item', s)));
+      detail.appendChild(softList);
+
+      detail.appendChild(el('p', 'details-section-title', 'Roadmap de aprendizado'));
+      const badges = el('div', 'roadmap-badges');
+      (step.roadmap || []).forEach((t) => badges.appendChild(el('span', 'roadmap-badge', t)));
+      detail.appendChild(badges);
+
+      toggleBtn.addEventListener('click', () => {
+        const open = detail.classList.toggle('open');
+        toggleBtn.classList.toggle('open', open);
+        toggleBtn.setAttribute('aria-expanded', String(open));
+        detail.setAttribute('aria-hidden', String(!open));
+        btnTxt.textContent = open ? 'Ocultar detalhes' : 'Ver detalhes';
+
+        /* Stagger de entrada nos badges ao abrir */
+        if (open) {
+          const roadmapBadges = detail.querySelectorAll('.roadmap-badge');
+          roadmapBadges.forEach((b, idx) => {
+            b.style.opacity = '0';
+            b.style.transform = 'translateY(10px)';
+            b.style.transition = `opacity .22s ease ${idx * 38}ms,
+                                transform .22s ease ${idx * 38}ms`;
+            /* Força reflow para a transição disparar */
+            void b.offsetWidth;
+            b.style.opacity = '1';
+            b.style.transform = 'translateY(0)';
+          });
+        }
       });
-  } else {
-    /* Browser antigo sem fetch: usa fallback */
-    console.warn('[carreira-json] fetch indisponivel, usando fallback embutido.');
-    finalize(FALLBACK_DATA);
-  }
-}());
+
+      card.appendChild(header);
+      card.appendChild(desc);
+      card.appendChild(toggleBtn);
+      card.appendChild(detail);
+      item.appendChild(diamond);
+      item.appendChild(card);
+      timeline.appendChild(item);
+    });
+  };
+
+  /* ══════════════════════════════════════════════
+     RENDER: HABILIDADES
+     ══════════════════════════════════════════════ */
+  const renderSkills = ({ skillGroups, otherSkills }) => {
+    const container = byId('skill-groups');
+    if (container && Array.isArray(skillGroups)) {
+      container.innerHTML = '';
+      skillGroups.forEach((group, gi) => {
+        const card = el('div', 'skill-card');
+        card.setAttribute('role', 'listitem');
+        card.style.transitionDelay = (gi * 0.1) + 's';
+
+        const header = el('div', 'skill-card-header');
+        const icon = el('span', 'skill-card-icon', group.icon || '\u25C8');
+        icon.setAttribute('aria-hidden', 'true');
+        header.appendChild(icon);
+        header.appendChild(el('p', 'skill-card-title', group.title));
+        card.appendChild(header);
+
+        (group.skills || []).forEach((skill) => {
+          const item = el('div', 'skill-item');
+          const row = el('div', 'skill-row');
+          row.appendChild(el('span', 'skill-name', skill.name));
+          row.appendChild(el('span', 'skill-percent', skill.level + '%'));
+
+          const track = el('div', 'skill-bar-track');
+          track.setAttribute('role', 'progressbar');
+          track.setAttribute('aria-label', skill.name + ': ' + skill.level + '%');
+          track.setAttribute('aria-valuenow', skill.level);
+          track.setAttribute('aria-valuemin', '0');
+          track.setAttribute('aria-valuemax', '100');
+
+          const fill = el('div', 'skill-bar-fill');
+          fill.dataset.level = skill.level;
+
+          track.appendChild(fill);
+          item.appendChild(row);
+          item.appendChild(track);
+          card.appendChild(item);
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    const otherList = byId('other-skills');
+    if (otherList && Array.isArray(otherSkills)) {
+      otherList.innerHTML = '';
+      otherSkills.forEach((skill) => {
+        const li = el('li');
+        const badge = el('span', 'other-skill-badge', skill);
+        li.appendChild(badge);
+        otherList.appendChild(li);
+      });
+    }
+  };
+
+  /* ══════════════════════════════════════════════
+     RENDER: IDIOMAS
+     ══════════════════════════════════════════════ */
+  const renderLanguages = (languages) => {
+    const list = byId('language-list');
+    if (!list || !Array.isArray(languages)) return;
+    list.innerHTML = '';
+
+    languages.forEach((lang) => {
+      const item = el('li', 'language-item');
+
+      const header = el('div', 'language-header');
+      header.appendChild(el('span', 'language-name', lang.name));
+      header.appendChild(el('span', 'language-level', lang.level));
+
+      const track = el('div', 'language-bar-track');
+      track.setAttribute('role', 'progressbar');
+      track.setAttribute('aria-label', lang.name + ': ' + lang.level);
+      track.setAttribute('aria-valuenow', lang.percent || 0);
+      track.setAttribute('aria-valuemin', '0');
+      track.setAttribute('aria-valuemax', '100');
+
+      const fill = el('div', 'language-bar-fill');
+      fill.dataset.level = lang.percent || 0;
+
+      track.appendChild(fill);
+      item.appendChild(header);
+      item.appendChild(track);
+      list.appendChild(item);
+    });
+  };
+
+  /* ══════════════════════════════════════════════
+     RENDER: PÁGINA COMPLETA
+     ══════════════════════════════════════════════ */
+  const renderPage = (data) => {
+    try { renderMeta(data); } catch (e) { console.error('[render] Meta:', e); }
+    try { renderProfile(data); } catch (e) { console.error('[render] Profile:', e); }
+    try { renderEducation(data.education); } catch (e) { console.error('[render] Edu:', e); }
+    try { renderTimeline(data.careerSteps); } catch (e) { console.error('[render] Timeline:', e); }
+    try { renderCertifications(data.certifications); } catch (e) { console.error('[render] Certs:', e); }
+    try { renderSkills(data); } catch (e) { console.error('[render] Skills:', e); }
+    try { renderLanguages(data.languages); } catch (e) { console.error('[render] Langs:', e); }
+
+    requestAnimationFrame(() => requestAnimationFrame(initAnimations));
+  };
+
+  /* ══════════════════════════════════════════════
+     MENSAGEM DE ERRO INLINE
+     ══════════════════════════════════════════════ */
+  const showError = (msg) => {
+    const main = byId('conteudo-principal');
+    if (!main) return;
+    const box = el('div');
+    box.style.cssText = [
+      'margin:2rem auto', 'max-width:640px', 'padding:1.5rem 2rem',
+      'background:rgba(180,83,9,.06)', 'border-left:4px solid #b45309',
+      "font-family:'Fira Code',monospace", 'font-size:.84rem',
+      'line-height:1.7', 'color:#78350f', 'white-space:pre-wrap',
+      'clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)'
+    ].join(';');
+    box.setAttribute('role', 'alert');
+    box.textContent = msg;
+    main.prepend(box);
+  };
+
+  /* ══════════════════════════════════════════════
+     BOOTSTRAP — INICIALIZAÇÃO
+     ══════════════════════════════════════════════ */
+  try { initParticles(); } catch (e) { console.error('[bootstrap] particles:', e); }
+  try { initNavbar(); } catch (e) { console.error('[bootstrap] navbar:', e); }
+  try { initScrollTop(); } catch (e) { console.error('[bootstrap] scrolltop:', e); }
+
+  /* Safety timeout: esconde loading mesmo se o fetch/render travar */
+  const _loadingTimeout = setTimeout(function () {
+    hideLoading();
+    console.warn('[carreira-json] Safety timeout acionado.');
+  }, 5000);
+
+  /*
+   * CARREGAMENTO DOS DADOS
+   * Tenta buscar assets/data/carreira.json (fonte de verdade editada pelo usuário).
+   * Se o fetch falhar (CORS, arquivo inexistente, offline), usa FALLBACK_DATA.
+   */
+  (function loadData() {
+    const finalize = (data) => {
+      try {
+        if (!data || typeof data !== 'object') throw new Error('Dados inválidos.');
+        renderPage(data);
+        clearTimeout(_loadingTimeout);
+        if (window._loadingFailsafe) clearTimeout(window._loadingFailsafe);
+        hideLoading();
+      } catch (err) {
+        clearTimeout(_loadingTimeout);
+        hideLoading();
+        try { showError('\u26A0\uFE0F  Erro ao renderizar: ' + err.message); } catch (_) { }
+        console.error('[carreira-json] Erro fatal no render:', err);
+      }
+    };
+
+    /* Tenta fetch do JSON externo */
+    if (typeof fetch !== 'undefined') {
+      fetch('assets/data/carreira.json')
+        .then((res) => {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then((data) => {
+          console.info('[carreira-json] Dados carregados de carreira.json');
+          finalize(data);
+        })
+        .catch((err) => {
+          console.warn('[carreira-json] Fetch falhou, usando fallback embutido.', err.message);
+          finalize(FALLBACK_DATA);
+        });
+    } else {
+      /* Browser antigo sem fetch: usa fallback */
+      console.warn('[carreira-json] fetch indisponivel, usando fallback embutido.');
+      finalize(FALLBACK_DATA);
+    }
+  }());

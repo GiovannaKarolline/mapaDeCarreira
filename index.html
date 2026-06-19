@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b21b6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12100e" media="(prefers-color-scheme: dark)">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Giovanna Karolline | Desenvolvedora de Software</title>
   <meta name="description"
     content="Currículo de Giovanna Karolline Menezes Ribeiro — estudante de ADS no IFSP, desenvolvedora com experiência em C#, React, Java e Python.">
+  <meta property="og:image" content="assets/images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#5b21b6">
   <link rel="shortcut icon" href="favicon.ico">
@@ -33,6 +38,10 @@
 
   <!-- Loading -->
   <div id="loading" role="status" aria-label="Carregando página">
+    <!-- Logo animado na tela de carregamento -->
+    <div class="loader-brand" aria-hidden="true">
+      <span class="loader-brand-text" data-text="GK.dev">GK.dev</span>
+    </div>
     <div class="loader-hex" aria-hidden="true">
       <span></span><span></span><span></span>
     </div>
@@ -71,7 +80,7 @@
        NAVBAR
   ══════════════════════════════════════ -->
   <nav id="navbar" role="navigation" aria-label="Navegação principal">
-    <a class="nav-brand" href="#hero">
+    <a class="nav-brand" href="#hero" data-text="GK.dev">
       <span class="nav-brand-geo" aria-hidden="true"></span>
       GK<span class="nav-brand-dot">.</span>dev
     </a>
@@ -121,6 +130,18 @@
 
         <!-- Linhas diagonais na área roxa -->
         <polygon points="310,0 900,0 900,650 160,650" fill="url(#diag-lines)" />
+
+        <!-- Grade de perspectiva convergente — ponto de fuga em ~530,325 -->
+        <line x1="310" y1="0" x2="900" y2="650" stroke="white" stroke-width=".5" opacity=".06" />
+        <line x1="360" y1="0" x2="900" y2="560" stroke="white" stroke-width=".4" opacity=".05" />
+        <line x1="420" y1="0" x2="900" y2="450" stroke="white" stroke-width=".4" opacity=".05" />
+        <line x1="490" y1="0" x2="900" y2="340" stroke="white" stroke-width=".3" opacity=".04" />
+        <line x1="310" y1="650" x2="900" y2="0" stroke="white" stroke-width=".5" opacity=".04" />
+        <line x1="360" y1="650" x2="900" y2="90" stroke="white" stroke-width=".4" opacity=".04" />
+        <!-- Linhas horizontais de grid na área violeta -->
+        <line x1="310" y1="162" x2="900" y2="162" stroke="white" stroke-width=".3" opacity=".04" />
+        <line x1="310" y1="325" x2="900" y2="325" stroke="white" stroke-width=".3" opacity=".04" />
+        <line x1="310" y1="487" x2="900" y2="487" stroke="white" stroke-width=".3" opacity=".04" />
 
         <!-- Círculos concêntricos decorativos (centro da foto) -->
         <circle cx="680" cy="280" r="140" fill="none" stroke="white" stroke-width="1" opacity="0.06" />
@@ -213,6 +234,7 @@
         </p>
 
         <p class="hero-objective" id="profile-objective"></p>
+        <p class="hero-tagline" id="profile-tagline" aria-label="Tagline"></p>
 
         <div class="hero-actions">
           <a id="cv-link" href="#" target="_blank" rel="noopener" class="btn-primary"
@@ -256,6 +278,11 @@
           <h2 class="section-title" id="titulo-sobre">Sobre Mim</h2>
         </header>
         <div class="sobre-card">
+          <!-- Triângulo âmbar decorativo no canto superior direito -->
+          <svg class="sobre-corner-deco" aria-hidden="true" focusable="false" width="64" height="64"
+            viewBox="0 0 64 64">
+            <polygon points="0,0 64,0 64,64" fill="var(--amber-light)" opacity=".07" />
+          </svg>
           <div class="sobre-icon" aria-hidden="true">◈</div>
           <p id="profile-summary" class="sobre-text"></p>
         </div>
