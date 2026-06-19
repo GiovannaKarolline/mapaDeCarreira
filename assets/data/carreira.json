@@ -1,20 +1,20 @@
 {
   "seo": {
     "title": "Giovanna Karolline | Desenvolvedora de Software",
-    "description": "Currículo e mapa de carreira de Giovanna Karolline Menezes Ribeiro — estudante de ADS no IFSP, desenvolvedora fullstack com foco em backend e impacto social.",
+    "description": "Portfólio e mapa de carreira de Giovanna Karolline — estudante de ADS no IFSP, apaixonada por código, design e por criar coisas que funcionam de verdade.",
     "author": "Giovanna Karolline Menezes Ribeiro",
     "canonicalUrl": "https://giovannakarolline.github.io/mapa-de-carreira"
   },
   "profile": {
     "name": "Giovanna Karolline",
     "lastName": "Menezes Ribeiro",
-    "headline": "Desenvolvedora de Software",
+    "headline": "Estudante de ADS · Desenvolvedora em formação",
     "location": "São Paulo, SP",
-    "objective": "Busco um estágio voltado ao desenvolvimento de software.",
-    "tagline": "// code · learn · repeat",
+    "objective": "Procuro meu primeiro estágio em desenvolvimento de software.",
+    "tagline": "// aprendendo mais a cada dia",
     "photo": "assets/images/profile.jpg",
-    "photoAlt": "Foto profissional de Giovanna Karolline Menezes Ribeiro",
-    "summary": "Estudante de Análise e Desenvolvimento de Sistemas no IFSP, com experiência em múltiplas linguagens e frameworks. Faço parte de equipe de projeto de extensão, desenvolvendo plataforma educacional em Flutter (Dart), atuando na documentação técnica (UML, backlog, requisitos), prototipação em Figma e aplicando metodologia ágil SCRUM.",
+    "photoAlt": "Foto de Giovanna Karolline",
+    "summary": "Sou estudante de Análise e Desenvolvimento de Sistemas no IFSP e já estou de cabeça dentro de projetos reais. Faço parte de um time que desenvolve uma plataforma educacional em Flutter — cuido da documentação técnica, participo das cerimônias SCRUM e prototipo no Figma. Também estou em dois bootcamps ao mesmo tempo (Java e C# fullstack) porque não consigo ficar parada. Tenho certificações da AWS e da Cisco, e adoro aprender coisas novas mesmo quando são difíceis.",
     "cvUrl": "Currículo_Giovanna_Ribeiro.PDF"
   },
   "contacts": [
@@ -42,15 +42,15 @@
   "stats": [
     {
       "value": "2+",
-      "label": "Anos de estudo"
+      "label": "Anos estudando"
     },
     {
-      "value": "3",
-      "label": "Certificações"
+      "value": "5",
+      "label": "Cursos e certificações"
     },
     {
-      "value": "7+",
-      "label": "Linguagens e Frameworks"
+      "value": "10+",
+      "label": "Linguagens e frameworks"
     }
   ],
   "education": [
@@ -77,7 +77,7 @@
       "issuer": "Instituto PROA",
       "area": "Desenvolvimento Fullstack C# ASP.NET",
       "status": "Em andamento",
-      "icon": "☕"
+      "icon": "💻"
     },
     {
       "name": "AWS Academy Data Engineering",
@@ -97,64 +97,86 @@
   ],
   "careerSteps": [
     {
-      "title": "Estudante & Estagiária",
-      "period": "Objetivo atual",
+      "title": "Estudante e Estagiária",
+      "period": "Agora · 2024–2026",
       "status": "current",
       "icon": "🌱",
-      "description": "Consolidação de fundamentos em múltiplas linguagens e frameworks. Participação em projeto de extensão com desenvolvimento de plataforma educacional em Flutter (Dart), aplicando SCRUM, Figma para prototipação e documentação técnica (UML, backlog, requisitos).",
+      "description": "Faculdade, bootcamps e projeto de extensão. Tenho usado Java, C#, Figma, SCRUM e documentação técnica em equipe. Estou buscando um estágio onde eu possa continuar crescendo, contribuir desde o início e aprender com pessoas mais experientes.",
       "softSkills": [
-        "Comunicação assertiva e trabalho em equipe",
-        "Organização via SCRUM e gestão de requisitos",
-        "Proatividade para aprender e aplicar novas tecnologias"
+        "Gosto de perguntar quando estou com dúvidas, me ajuda a entender de forma completa",
+        "Trabalho bem em equipe, gosto de colaborar e trocar conhecimentos",
+        "Aprendo rápido e gosto de documentar o que aprendo"
       ],
       "roadmap": [
+        "Java (foco principal)",
+        "C# e ASP.NET",
         "Flutter / Dart",
-        "ReactJS",
-        "Java",
-        "Python",
-        "Figma",
         "SQL",
-        "Git & GitHub"
+        "Git & GitHub",
+        "ReactJS",
+        "Figma"
       ]
     },
     {
       "title": "Desenvolvedora Júnior",
-      "period": "Próximo passo · 2026",
+      "period": "Próximos passos · 2026–2028",
       "status": "next",
       "icon": "🚀",
-      "description": "Atuação com autonomia em projetos fullstack, foco em backend com Java / Node.js, entrega de funcionalidades com qualidade, testes automatizados e documentação profissional.",
+      "description": "Em meu primeiro emprego como desenvolvedora, quero entregar funcionalidades completas, receber feedbacks de forma construtiva e contribuir com minha equipe.",
       "softSkills": [
-        "Responsabilidade sobre entregas e prazos",
-        "Colaboração em code reviews e decisões técnicas",
-        "Capacidade de explicar escolhas para diferentes públicos"
+        "Conhecer formas mais eficientes para realizar tarefas",
+        "Receber feedbacks e aprender com eles",
+        "Explicar de forma clara o que eu construir"
       ],
       "roadmap": [
         "Spring Boot",
-        "Node.js",
         "APIs REST",
-        "Testes Automatizados",
+        "Testes unitários",
         "PostgreSQL",
         "Docker",
-        "CI/CD"
+        "CI/CD básico",
+        "AWS"
       ]
     },
     {
-      "title": "Liderança Técnica",
-      "period": "Objetivo de longo prazo",
+      "title": "Desenvolvedora Pleno",
+      "period": "Próximos passos · 2028–2030",
       "status": "next",
-      "icon": "⭐",
-      "description": "Contribuir para arquitetura de sistemas, orientar equipes de desenvolvimento e apoiar decisões técnicas com visão sistêmica sobre produto, pessoas e tecnologia.",
+      "icon": "⚡",
+      "description": "Chegar no nível pleno significa que já consigo tocar um projeto com mais autonomia, influenciar decisões técnicas e começar a ajudar quem está começando. É a transição mais difícil da carreira de dev — e é exatamente por isso que eu já quero ir me preparando para ela.",
       "softSkills": [
-        "Mentoria com escuta ativa e feedback construtivo",
-        "Visão sistêmica sobre produto, pessoas e tecnologia",
-        "Facilitação de ambientes psicologicamente seguros"
+        "Tomar decisões técnicas em equipe",
+        "Capacidade de orientar novos desenvolvedores",
+        "Agregar valor à soluções de software"
       ],
       "roadmap": [
-        "Arquitetura de Software",
-        "Cloud AWS",
-        "Engenharia de Dados",
-        "Segurança",
-        "Gestão de Pessoas"
+        "Arquitetura e Design Patterns",
+        "Microsserviços",
+        "Docker + CI/CD avançado",
+        "Certificação AWS Solutions Architect",
+        "Banco de dados avançado",
+        "Inglês técnico",
+        "Gestão de projetos"
+      ]
+    },
+    {
+      "title": "Engenheira de Software",
+      "period": "O sonho · 2030+",
+      "status": "next",
+      "icon": "⭐",
+      "description": "Meu objetivo é ser referência na minha área de atuação, quero ser a pessoa que define como o time vai construir os projetos, que resolve problemas difíceis e ajuda outras pessoas a crescerem.",
+      "softSkills": [
+        "Balancear decisões técnicas ao impacto real no produto",
+        "Criar um ambiente onde as pessoas se sintam seguras pra errar e aprender",
+        "Falar Inglês fluentemente para poder trabalhar internacionalmente"
+      ],
+      "roadmap": [
+        "Sistemas distribuídos",
+        "Kubernetes e infraestrutura",
+        "Segurança de Sistemas",
+        "Engenharia de dados",
+        "Liderança técnica de times",
+        "Arquitetura para alta escala"
       ]
     }
   ],
@@ -172,6 +194,10 @@
           "level": 65
         },
         {
+          "name": "C#",
+          "level": 65
+        },
+        {
           "name": "Python",
           "level": 60
         },
@@ -186,16 +212,20 @@
       "icon": "⬡",
       "skills": [
         {
+          "name": "Bootstrap",
+          "level": 75
+        },
+        {
           "name": "ReactJS",
           "level": 70
         },
         {
-          "name": "C#",
+          "name": "Flutter",
           "level": 65
         },
         {
-          "name": "Bootstrap",
-          "level": 75
+          "name": ".NET",
+          "level": 60
         },
         {
           "name": "Flask",
@@ -212,29 +242,31 @@
           "level": 80
         },
         {
+          "name": "SCRUM",
+          "level": 75
+        },
+        {
           "name": "SQL",
           "level": 65
         },
         {
           "name": "Figma",
-          "level": 60
-        },
-        {
-          "name": "SCRUM / Agile",
-          "level": 70
+          "level": 65
         }
       ]
     }
   ],
   "otherSkills": [
     "Lógica de programação",
-    "Versionamento de código",
-    "Gestão de requisitos",
     "Documentação técnica",
     "Diagramas UML",
+    "Gestão de requisitos",
+    "Backlog de atividades",
+    "Versionamento de código",
+    "AWS Data Engineering",
+    "Defesa de Redes (Cisco)",
     "Comunicação assertiva",
     "Trabalho em equipe",
-    "AWS",
     "Linux"
   ],
   "languages": [

@@ -1,26 +1,19 @@
-/* =============================================
-   DESIGN SYSTEM — GEOMÉTRICO / GRUNGE / CLARO
-   Giovanna Karolline Menezes Ribeiro | 2026
-   =============================================
-   Paleta: creme quente + violeta profundo + âmbar
-   Estética: geométrico, tipografia forte, grunge suave
-   Fontes carregadas via <link> no HTML (não usar @import aqui)
-   ============================================= */
 
-/* ─── TOKENS ──────────────────────────────── */
+
+
 :root {
-  /* Cores base — paleta clara e quente */
+  
   --page: #ede8dc;
   --page-dark: #0e0b08;
-  /* creme parchment */
+  
   --surface: #ffffff;
-  /* branco puro */
+  
   --surface-2: #f7f4ee;
-  /* branco ligeiramente quente */
+  
   --surface-3: #ede9df;
-  /* creme médio */
+  
 
-  /* Marca */
+  
   --violet: #5b21b6;
   --violet-2: #7c3aed;
   --violet-light: #8b5cf6;
@@ -35,29 +28,29 @@
   --green-light: #059669;
   --green-pale: rgba(15, 107, 77, .10);
 
-  /* Texto */
+  
   --ink: #1c1710;
-  /* quase-preto quente */
+  
   --ink-muted: #5c5249;
   --ink-faint: #9c9189;
   --white: #ffffff;
 
-  /* Bordas */
+  
   --border: rgba(91, 33, 182, .14);
   --border-dark: rgba(91, 33, 182, .30);
 
-  /* Sombras */
+  
   --shadow-card: 0 2px 16px rgba(28, 23, 16, .10);
   --shadow-lift: 0 8px 32px rgba(28, 23, 16, .15);
   --shadow-violet: 0 4px 24px rgba(91, 33, 182, .20);
 
-  /* Gradientes */
+  
   --grad-violet: linear-gradient(135deg, #5b21b6, #7c3aed);
   --grad-amber: linear-gradient(135deg, #b45309, #d97706);
   --grad-skill: linear-gradient(90deg, #5b21b6, #7c3aed);
   --grad-lang: linear-gradient(90deg, #0f6b4d, #059669);
 
-  /* Espaços */
+  
   --s1: .25rem;
   --s2: .5rem;
   --s3: .75rem;
@@ -71,21 +64,21 @@
   --s20: 5rem;
   --s24: 6rem;
 
-  /* Raios */
+  
   --r-sm: 4px;
   --r-md: 10px;
   --r-lg: 16px;
   --r-full: 9999px;
 
-  /* Tipografia */
+  
   --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'Fira Code', 'Consolas', monospace;
 
-  /* Easing */
+  
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* ── Transparências para glassmorphism ── */
+  
   --glass-bg: rgba(255, 255, 255, .55);
   --glass-bg-2: rgba(255, 255, 255, .35);
   --glass-border: rgba(255, 255, 255, .70);
@@ -93,7 +86,7 @@
     0 2px 8px rgba(0, 0, 0, .06);
   --glass-blur: blur(16px) saturate(1.4);
 
-  /* ── Orbs decorativos (radial semi-transparentes) ── */
+  
   --orb-violet: radial-gradient(ellipse,
       rgba(91, 33, 182, .18) 0%, transparent 70%);
   --orb-amber: radial-gradient(ellipse,
@@ -101,12 +94,12 @@
   --orb-green: radial-gradient(ellipse,
       rgba(15, 107, 77, .12) 0%, transparent 70%);
 
-  /* ── Gradiente do hero escuro ── */
+  
   --hero-bg: linear-gradient(135deg,
       #2d1b69 0%, #1a0d2e 40%, #0e0b1e 100%);
 }
 
-/* ─── DARK MODE ─────────────────────────── */
+
 @media (prefers-color-scheme: dark) {
   :root {
     --page: #12100e;
@@ -137,7 +130,7 @@
   }
 }
 
-/* ─── RESET ───────────────────────────────── */
+
 *,
 *::before,
 *::after {
@@ -154,7 +147,7 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--page);
-  /* Grade + diagonal em dois ângulos — mais rico e geométrico */
+  
   background-image:
     linear-gradient(rgba(91, 33, 182, .055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(91, 33, 182, .055) 1px, transparent 1px),
@@ -173,7 +166,7 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  /* Orb violeta centralizado como luz de ambiente */
+  
   background:
     radial-gradient(ellipse 80% 60% at 50% 30%,
       rgba(91, 33, 182, .05) 0%, transparent 70%),
@@ -181,7 +174,7 @@ body::before {
       rgba(217, 119, 6, .04) 0%, transparent 60%);
 }
 
-/* Garante que todo conteúdo fique acima da camada de ruído */
+
 #navbar,
 #hero,
 main,
@@ -218,7 +211,7 @@ a:hover {
   color: var(--ink);
 }
 
-/* Cursor geométrico — losango violeta */
+
 :root {
   --cur: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpolygon points='11,2 20,11 11,20 2,11' fill='%235b21b6' opacity='.82'/%3E%3Cpolygon points='11,5 17,11 11,17 5,11' fill='none' stroke='white' stroke-width='.8' opacity='.5'/%3E%3C/svg%3E") 11 11, auto;
 }
@@ -238,7 +231,7 @@ label {
   cursor: var(--cur);
 }
 
-/* ─── SKIP LINK ───────────────────────────── */
+
 .skip-link {
   position: fixed;
   top: -6rem;
@@ -256,7 +249,7 @@ label {
   top: 1rem;
 }
 
-/* ─── PARTÍCULAS ──────────────────────────── */
+
 .bg-particles {
   position: fixed;
   inset: 0;
@@ -271,18 +264,18 @@ label {
   animation: float-up linear infinite;
 }
 
-/* partícula quadrada (geométrica) */
+
 .particle-sq {
   border-radius: 2px;
   transform-origin: center;
 }
 
-/* partícula diamante */
+
 .particle-dm {
   transform: rotate(45deg);
 }
 
-/* partícula linha (traço fino diagonal) */
+
 .particle-ln {
   width: 1px !important;
   height: 18px !important;
@@ -315,7 +308,7 @@ label {
   }
 }
 
-/* ─── ANIMAÇÕES DE ENTRADA (HERO) ───────── */
+
 @keyframes hero-slide-left {
   from {
     opacity: 0;
@@ -352,7 +345,7 @@ label {
 
 @keyframes photo-glow {
 
-  /* Sem movimento Y — evita tremido/bounce */
+  
   0%,
   100% {
     filter: drop-shadow(0 4px 18px rgba(91, 33, 182, .20));
@@ -377,7 +370,7 @@ label {
   }
 }
 
-/* Entrada escalonada — cada elemento do hero entra com delay próprio */
+
 .hero-location {
   animation: hero-slide-left .55s var(--ease-out) .05s both;
 }
@@ -406,7 +399,7 @@ label {
   animation: hero-slide-up .45s var(--ease-out) .68s both;
 }
 
-/* Linha decorativa de acento no hero */
+
 .hero-accent-line {
   display: flex;
   align-items: center;
@@ -436,24 +429,8 @@ label {
   flex-shrink: 0;
 }
 
-.hero-photo-col {
-  animation: hero-fade-in .80s var(--ease-out) .10s both;
-}
 
-/* Glow pulsante na foto — sem movimento (sem bounce) */
-.photo-frame-outer {
-  /* sem animação de posição */
-}
 
-.hero-photo {
-  animation: photo-glow 4.5s ease-in-out infinite;
-}
-
-.photo-frame-deco-1 {
-  animation: deco-pulse 5s ease-in-out infinite;
-}
-
-/* ─── NAVBAR ──────────────────────────────── */
 #navbar {
   position: fixed;
   top: 0;
@@ -495,7 +472,7 @@ label {
   box-shadow: var(--glass-shadow);
 }
 
-/* Brand */
+
 .nav-brand {
   font-family: var(--font-display);
   font-weight: 700;
@@ -521,7 +498,7 @@ label {
   color: var(--amber-light);
 }
 
-/* Glitch cromático no brand — sutil, 200ms */
+
 .nav-brand {
   position: relative;
   overflow: visible;
@@ -532,7 +509,7 @@ label {
   content: attr(data-text);
   position: absolute;
   left: 26px;
-  /* offset do nav-brand-geo (10px + 8px gap + 8px aprox) */
+  
   top: 0;
   font-size: inherit;
   font-weight: inherit;
@@ -559,7 +536,7 @@ label {
   opacity: .45;
 }
 
-/* Links */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -599,7 +576,7 @@ label {
   width: 100%;
 }
 
-/* CTA na navbar */
+
 .nav-cta {
   font-size: .78rem;
   font-weight: 700;
@@ -619,7 +596,7 @@ label {
   box-shadow: var(--shadow-violet);
 }
 
-/* Menu mobile */
+
 .nav-menu-btn {
   display: none;
   background: none;
@@ -637,7 +614,7 @@ label {
   color: var(--violet);
 }
 
-/* ─── HERO ────────────────────────────────── */
+
 #hero {
   position: relative;
   min-height: 100vh;
@@ -649,7 +626,7 @@ label {
   color: #f0ece2;
 }
 
-/* Orb violeta grande — canto superior direito */
+
 #hero::before {
   content: '';
   position: absolute;
@@ -664,7 +641,7 @@ label {
   animation: orb-float 12s ease-in-out infinite;
 }
 
-/* Orb âmbar — inferior esquerdo */
+
 #hero::after {
   content: '';
   position: absolute;
@@ -695,7 +672,7 @@ label {
   }
 }
 
-/* Todos os textos do hero herdam a cor clara */
+
 #hero .hero-nome {
   color: #f0ece2;
 }
@@ -754,7 +731,7 @@ label {
   border-color: #f0ece2;
 }
 
-/* ── Cores do hero sobre fundo escuro ── */
+
 #hero .hero-nome {
   color: #f0ece2;
 }
@@ -770,7 +747,7 @@ label {
   display: none;
 }
 
-/* remove off-register no escuro */
+
 #hero .hero-headline {
   color: rgba(240, 236, 226, .75);
 }
@@ -824,7 +801,7 @@ label {
   background: rgba(255, 255, 255, .1);
 }
 
-/* Decoração geométrica SVG */
+
 .hero-geo-wrap {
   position: absolute;
   inset: 0;
@@ -838,7 +815,7 @@ label {
   object-fit: cover;
 }
 
-/* Layout interno */
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -848,12 +825,12 @@ label {
   padding: var(--s16) var(--s8);
   display: grid;
   grid-template-columns: 1fr 340px;
-  /* era 280px — foto maior */
+  
   gap: var(--s12);
   align-items: center;
 }
 
-/* Localização */
+
 .hero-location {
   display: inline-flex;
   align-items: center;
@@ -862,7 +839,7 @@ label {
   font-weight: 600;
   font-family: var(--font-mono);
   color: var(--ink);
-  /* era --ink-muted — contraste insuficiente */
+  
   letter-spacing: .06em;
   text-transform: uppercase;
   margin-bottom: var(--s4);
@@ -873,7 +850,7 @@ label {
   font-size: .9rem;
 }
 
-/* Nome */
+
 .hero-nome {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 7vw, 5.2rem);
@@ -889,11 +866,11 @@ label {
   color: var(--amber-light);
   position: relative;
   display: inline-block;
-  /* Underline geométrico espesso */
+  
   text-decoration: none;
 }
 
-/* Linha diagonal grunge sob o sobrenome */
+
 .hero-nome-em::after {
   content: '';
   position: absolute;
@@ -906,7 +883,7 @@ label {
   opacity: .5;
 }
 
-/* Sombra off-register âmbar/violeta */
+
 .hero-nome-em::before {
   content: attr(data-text);
   position: absolute;
@@ -919,7 +896,7 @@ label {
   z-index: -1;
 }
 
-/* Headline */
+
 .hero-headline {
   display: flex;
   align-items: center;
@@ -927,7 +904,7 @@ label {
   font-family: var(--font-mono);
   font-size: clamp(.9rem, 1.8vw, 1.1rem);
   color: var(--ink);
-  /* era --ink-muted — subtítulo muito apagado */
+  
   font-weight: 500;
   margin-bottom: var(--s5);
 }
@@ -937,19 +914,19 @@ label {
   font-weight: 700;
 }
 
-/* Objetivo */
+
 .hero-objective {
   font-size: 1rem;
   font-weight: 600;
-  /* era 500 + italic — itálico reduz contraste percebido */
+  
   color: var(--ink);
-  /* era --violet — mais legível sobre creme */
+  
   margin-bottom: var(--s6);
   padding-left: var(--s5);
   border-left: 3px solid var(--violet);
 }
 
-/* Tagline estilo comentário de código */
+
 .hero-tagline {
   font-family: var(--font-mono);
   font-size: .78rem;
@@ -962,7 +939,7 @@ label {
   animation: hero-slide-up .45s var(--ease-out) .42s both;
 }
 
-/* Ações */
+
 .hero-actions {
   display: flex;
   gap: var(--s3);
@@ -970,7 +947,7 @@ label {
   margin-bottom: var(--s6);
 }
 
-/* Botões */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -985,7 +962,7 @@ label {
   border: none;
   cursor: pointer;
   text-decoration: none;
-  /* canto cortado geométrico */
+  
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
   transition: background .2s, transform .2s var(--ease-spring), box-shadow .2s;
 }
@@ -1012,7 +989,7 @@ label {
   border: 2px solid rgba(28, 23, 16, .5);
   cursor: pointer;
   text-decoration: none;
-  /* Usar propriedades explícitas — 'transition: all' anima clip-path e faz o botão "sumir" */
+  
   transition: border-color .22s, color .22s, background-color .22s,
     box-shadow .22s, transform .22s var(--ease-spring);
   clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
@@ -1021,15 +998,15 @@ label {
 .btn-ghost:hover {
   border-color: var(--surface);
   color: #fff;
-  /* texto branco sobre fundo violeta — WCAG AA */
+  
   background: var(--violet);
-  /* era violet-xpale (.06) — quase transparente = botão "some" */
+  
   box-shadow: var(--shadow-violet);
   transform: translateY(-3px);
   text-decoration: none;
 }
 
-/* Stats */
+
 .hero-stats {
   display: flex;
   gap: var(--s4);
@@ -1040,7 +1017,7 @@ label {
 .stat-chip {
   background: var(--surface);
   border: 2px solid rgba(28, 23, 16, .1);
-  /* canto cortado */
+  
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
   padding: .7rem 1.2rem;
   text-align: center;
@@ -1060,15 +1037,15 @@ label {
   display: block;
   font-size: .65rem;
   font-weight: 700;
-  /* era 600 */
+  
   text-transform: uppercase;
   letter-spacing: .08em;
   color: var(--ink-muted);
-  /* era --ink-faint (#9c9189) — falha WCAG AA */
+  
   margin-top: .3rem;
 }
 
-/* Contatos */
+
 .hero-contacts {
   display: flex;
   flex-direction: column;
@@ -1080,10 +1057,10 @@ label {
   align-items: center;
   gap: var(--s3);
   font-size: .875rem;
-  /* era .85rem — texto pequeno precisa de tamanho mínimo */
+  
   font-weight: 500;
   color: var(--ink);
-  /* era --ink-muted — contraste insuficiente para texto pequeno */
+  
   transition: color .2s, gap .15s;
   text-decoration: none;
 }
@@ -1107,7 +1084,7 @@ label {
   font-weight: 700;
   font-family: var(--font-mono);
   color: var(--violet);
-  /* quadrado angular */
+  
   clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
   transition: background .2s;
 }
@@ -1116,7 +1093,7 @@ label {
   background: rgba(91, 33, 182, .18);
 }
 
-/* Foto com moldura geométrica */
+
 .hero-photo-col {
   display: flex;
   justify-content: center;
@@ -1130,19 +1107,19 @@ label {
   justify-content: center;
 }
 
-/* Diamante decorativo de fundo */
+
 .photo-frame-deco-1 {
   position: absolute;
   width: 330px;
   height: 330px;
-  /* era 280px — acompanha foto maior */
+  
   background: rgba(255, 255, 255, .1);
   transform: rotate(45deg);
   border: 2px solid rgba(255, 255, 255, .22);
   z-index: 0;
 }
 
-/* Octágono externo decorativo */
+
 .photo-frame-deco-3 {
   position: absolute;
   width: 358px;
@@ -1159,7 +1136,7 @@ label {
   animation: ring-spin 28s linear infinite;
 }
 
-/* Segundo octágono interno menor, rotação inversa */
+
 .photo-frame-deco-3::after {
   content: '';
   position: absolute;
@@ -1182,7 +1159,7 @@ label {
   }
 }
 
-/* Quadrado menor âmbar */
+
 .photo-frame-deco-2 {
   position: absolute;
   width: 52px;
@@ -1202,14 +1179,14 @@ label {
   object-fit: cover;
   object-position: top center;
   border-radius: 40% 60% 55% 45% / 45% 50% 50% 55%;
-  /* blob orgânico */
+  
   border: 3px solid rgba(255, 255, 255, .25);
   box-shadow:
     0 0 0 8px rgba(91, 33, 182, .12),
     0 0 0 16px rgba(91, 33, 182, .06),
     0 24px 64px rgba(91, 33, 182, .35);
-  animation: photo-breathe 6s ease-in-out infinite;
-  transition: filter .4s;
+  animation: photo-breathe 12s ease-in-out infinite;
+  transition: filter .10s;
 }
 
 @keyframes photo-breathe {
@@ -1230,13 +1207,13 @@ label {
   }
 }
 
-/* Remover deco-1 (losango) e deco-3 (octágono) — blob é auto-suficiente */
+
 .photo-frame-deco-1,
 .photo-frame-deco-3 {
   display: none;
 }
 
-/* Manter o deco-2 âmbar mas reposicionar */
+
 .photo-frame-deco-2 {
   position: absolute;
   width: 40px;
@@ -1261,13 +1238,13 @@ label {
   }
 }
 
-/* ─── MAIN ────────────────────────────────── */
+
 main {
   position: relative;
   z-index: 1;
 }
 
-/* ─── SEÇÃO ───────────────────────────────── */
+
 .page-section {
   padding: calc(var(--s16) + 28px) 0;
   clip-path: polygon(0 28px, 100% 0, 100% calc(100% - 28px), 0 100%);
@@ -1277,7 +1254,7 @@ main {
 .page-section--alt {
   background-color: rgba(255, 255, 255, .45);
   background-image: none;
-  /* remove o padrão de pontos */
+  
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-top: 1px solid rgba(255, 255, 255, .70);
@@ -1305,7 +1282,7 @@ main {
   max-width: 700px;
 }
 
-/* Número de seção */
+
 .section-number-bg {
   position: absolute;
   top: -2.5rem;
@@ -1317,21 +1294,21 @@ main {
   pointer-events: none;
   user-select: none;
   letter-spacing: -.06em;
-  /* Stroke grunge: outline sem preenchimento */
+  
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(91, 33, 182, .12);
-  /* Segunda camada: preenchimento muito pálido */
+  
   background: linear-gradient(170deg,
       rgba(91, 33, 182, .07) 0%,
       rgba(180, 83, 9, .04) 60%,
       transparent 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  /* Garante que o outline apareça mesmo com background-clip */
+  
   -webkit-text-fill-color: transparent;
 }
 
-/* Janela de código flutuante no hero */
+
 .hero-code-float {
   position: absolute;
   right: 8%;
@@ -1361,14 +1338,14 @@ main {
   }
 }
 
-/* No mobile: esconder janela de código */
+
 @media (max-width: 900px) {
   .hero-code-float {
     display: none;
   }
 }
 
-/* ─── CABEÇALHO DE SEÇÃO ──────────────────── */
+
 .section-header {
   margin-bottom: var(--s10);
 }
@@ -1387,9 +1364,9 @@ main {
   border: 1px solid rgba(91, 33, 182, .16);
   padding: .28rem 1rem;
   border-radius: var(--r-full);
-  /* pill */
+  
   clip-path: none;
-  /* remove o corte angular */
+  
   margin-bottom: var(--s4);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
@@ -1402,7 +1379,7 @@ main {
   height: 6px;
   background: var(--amber-light);
   border-radius: 50%;
-  /* ponto circular vs losango anterior */
+  
   flex-shrink: 0;
   animation: dot-pulse 2.5s ease-in-out infinite;
 }
@@ -1439,7 +1416,7 @@ main {
   bottom: -8px;
   left: 0;
   width: 100%;
-  /* underline de largura total */
+  
   max-width: 120px;
   height: 3px;
   background: linear-gradient(90deg,
@@ -1463,13 +1440,13 @@ main {
 .section-subtitle {
   font-size: 1rem;
   color: var(--ink);
-  /* era --ink-muted — contraste insuficiente */
+  
   line-height: 1.7;
   max-width: 560px;
   margin-top: var(--s4);
 }
 
-/* ─── SOBRE ───────────────────────────────── */
+
 .sobre-card {
   background: var(--glass-bg);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -1478,7 +1455,7 @@ main {
   border-left: 4px solid var(--violet);
   border-radius: var(--r-lg);
   clip-path: none;
-  /* remove clip angular — glass não combina */
+  
   padding: var(--s8) var(--s10);
   display: flex;
   gap: var(--s6);
@@ -1489,7 +1466,7 @@ main {
   overflow: hidden;
 }
 
-/* Orb decorativo interno */
+
 .sobre-card::after {
   content: '';
   position: absolute;
@@ -1534,10 +1511,10 @@ main {
   font-size: 1rem;
   line-height: 1.85;
   color: var(--ink);
-  /* era --ink-muted — texto principal deve ser --ink */
+  
 }
 
-/* ─── EDUCAÇÃO ────────────────────────────── */
+
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1635,7 +1612,7 @@ main {
   color: var(--green);
 }
 
-/* ─── TIMELINE ────────────────────────────── */
+
 .timeline {
   position: relative;
   padding-left: 3.5rem;
@@ -1644,7 +1621,7 @@ main {
   gap: var(--s8);
 }
 
-/* Linha da timeline: gradiente violeta→verde */
+
 
 .timeline::before {
   content: '';
@@ -1663,7 +1640,7 @@ main {
 }
 
 
-/* ─── TIMELINE LINHA CONECTORA GRUNGE ────── */
+
 .timeline {
   position: relative;
 }
@@ -1680,7 +1657,7 @@ main {
       var(--violet) 5px,
       transparent 5px,
       transparent 11px);
-  /* Some no final — cria sensação de continuidade futura */
+  
   mask-image: linear-gradient(to bottom,
       black 0%,
       black 65%,
@@ -1704,7 +1681,7 @@ main {
   transform: translateX(0);
 }
 
-/* Marcador diamante */
+
 .timeline-diamond {
   position: absolute;
   left: calc(-3.5rem + 3px);
@@ -1753,7 +1730,7 @@ main {
   }
 }
 
-/* Card da timeline: glass */
+
 .timeline-card {
   background: var(--glass-bg);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -1773,12 +1750,12 @@ main {
   border-left-color: var(--violet);
 }
 
-/* Card atual: destaque glass violeta */
+
 .timeline-card.current {
-  background: rgba(91, 33, 182, .08);
-  border: 1px solid rgba(91, 33, 182, .25);
-  border-left: 3px solid var(--violet);
-  box-shadow: 0 0 0 4px rgba(91, 33, 182, .06), var(--glass-shadow);
+  background: var(--grad-violet);
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-left: 3px solid var(--amber-light);
+  box-shadow: 0 0 0 4px rgba(91, 33, 182, .15), var(--glass-shadow);
 }
 
 .timeline-card.current .timeline-title {
@@ -1822,13 +1799,13 @@ main {
   color: #fff;
 }
 
-/* Badge de status atual — âmbar sólido */
+
 .status-current {
   background: var(--amber-light);
   color: #fff;
 }
 
-/* Cabeçalho do card */
+
 .timeline-card-header {
   display: flex;
   align-items: flex-start;
@@ -1896,7 +1873,7 @@ main {
   margin-bottom: var(--s4);
 }
 
-/* Accordion */
+
 .toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -2010,7 +1987,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* ─── CERTIFICAÇÕES ───────────────────────── */
+
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -2037,7 +2014,7 @@ main {
   overflow: hidden;
 }
 
-/* Mini orb âmbar no canto */
+
 .cert-card::after {
   content: '';
   position: absolute;
@@ -2132,7 +2109,7 @@ main {
   text-decoration: underline;
 }
 
-/* ─── HABILIDADES ─────────────────────────── */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2148,10 +2125,10 @@ main {
   border-radius: var(--r-lg);
   clip-path: none;
   padding: 0;
-  /* header tem padding próprio */
+  
   box-shadow: var(--glass-shadow);
   overflow: hidden;
-  /* contém o header colorido */
+  
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .5s var(--ease-out), transform .5s var(--ease-out),
@@ -2179,7 +2156,7 @@ main {
   border-bottom: none;
 }
 
-/* Corpo do skill card precisa de padding */
+
 .skill-card .skill-item {
   padding: 0 var(--s5);
 }
@@ -2219,7 +2196,7 @@ main {
   letter-spacing: -.01em;
 }
 
-/* Item de skill */
+
 .skill-item {
   margin-bottom: var(--s4);
 }
@@ -2248,7 +2225,7 @@ main {
   color: var(--violet);
 }
 
-/* Barra de skill */
+
 .skill-bar-track {
   height: 8px;
   background: rgba(91, 33, 182, .10);
@@ -2258,12 +2235,15 @@ main {
 }
 
 .skill-bar-fill {
+  height: 100%;
+  width: 0;
+  transition: width 1.4s var(--ease-out);
   border-radius: 4px;
   background: linear-gradient(90deg, var(--violet) 0%, var(--violet-2) 60%, #a78bfa 100%);
   clip-path: none;
 }
 
-/* brilho sutil na extremidade direita da barra — contido dentro do fill */
+
 .skill-bar-fill::after {
   content: '';
   position: absolute;
@@ -2286,7 +2266,7 @@ main {
   left: -70%;
   width: 50%;
   height: 100%;
-  /* Scanlines horizontais estilo CRT passando pela barra */
+  
   background: repeating-linear-gradient(0deg,
       transparent,
       transparent 2px,
@@ -2296,7 +2276,7 @@ main {
   animation-delay: 1.6s;
 }
 
-/* ─── OUTRAS COMPETÊNCIAS ─────────────────── */
+
 .other-skills-block {
   background: var(--surface);
   border-left: 5px solid var(--amber-light);
@@ -2356,7 +2336,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* ─── IDIOMAS ─────────────────────────────── */
+
 .languages-wrap {
   background: var(--surface);
   border-top: 4px solid var(--green);
@@ -2430,9 +2410,9 @@ main {
   transition: width 1.4s var(--ease-out);
 }
 
-/* ─── LOADING ─────────────────────────────── */
+
 #loading {
-  /* Não usar CSS vars aqui: garante estilo mesmo antes das vars serem processadas */
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -2440,7 +2420,7 @@ main {
   bottom: 0;
   width: 100%;
   height: 100%;
-  /* Cor de fundo explícita como fallback */
+  
   background-color: #0e0b08;
   background-color: var(--page-dark, #0e0b08);
   z-index: 9999;
@@ -2451,10 +2431,10 @@ main {
   gap: 1.25rem;
   gap: var(--s5, 1.25rem);
   transition: opacity .4s ease, visibility .4s ease;
-  /* Fallback CSS puro: esconde após 8s se o JS não o fizer */
+  
   animation: loading-css-fallback 0.5s ease 8s forwards;
 
-  /* Logo glitch no loader */
+  
   .loader-brand {
     margin-bottom: 1.2rem;
   }
@@ -2579,7 +2559,7 @@ main {
   pointer-events: none;
 }
 
-/* Loader geométrico — 3 diamantes pulsando suavemente */
+
 .loader-hex {
   display: flex;
   gap: 10px;
@@ -2633,7 +2613,7 @@ main {
   letter-spacing: .06em;
 }
 
-/* ─── SCROLL TO TOP ───────────────────────── */
+
 #scroll-top {
   position: fixed;
   bottom: 2rem;
@@ -2647,7 +2627,7 @@ main {
   border: 1px solid rgba(91, 33, 182, .25);
   color: var(--violet);
   border-radius: 50%;
-  /* círculo em vez de losango */
+  
   clip-path: none;
   font-size: 1rem;
   font-weight: 700;
@@ -2673,7 +2653,7 @@ main {
   box-shadow: 0 8px 24px rgba(91, 33, 182, .35);
 }
 
-/* Substituições de clip-path → border-radius */
+
 .toggle-btn {
   clip-path: none;
   border-radius: var(--r-sm);
@@ -2721,7 +2701,7 @@ main {
   -webkit-text-stroke: 1px rgba(91, 33, 182, .1);
 }
 
-/* Tooltip "Topo" ao hover */
+
 #scroll-top::after {
   content: 'Topo';
   position: absolute;
@@ -2756,7 +2736,7 @@ main {
   box-shadow: var(--shadow-violet);
 }
 
-/* ─── FOOTER ──────────────────────────────── */
+
 footer {
   position: relative;
   z-index: 1;
@@ -2769,12 +2749,12 @@ footer {
   overflow: hidden;
 }
 
-/* Remove o tile de losangos — substituído por orb */
+
 footer {
   background-image: none;
 }
 
-/* Orb de encerramento centralizado */
+
 footer::after {
   content: '';
   position: absolute;
@@ -2788,7 +2768,7 @@ footer::after {
   pointer-events: none;
 }
 
-/* Barra gradiente no topo do footer */
+
 footer::before {
   content: '';
   position: absolute;
@@ -2838,14 +2818,14 @@ footer::before {
   font-weight: 700;
 }
 
-/* ─── FOCO ────────────────────────────────── */
+
 :focus-visible {
   outline: 2px solid var(--violet);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* ─── REDUCED MOTION ──────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -2856,9 +2836,7 @@ footer::before {
   }
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVO
-   ══════════════════════════════════════════ */
+
 
 @media (max-width: 1100px) {
   .skills-grid {
@@ -2887,7 +2865,7 @@ footer::before {
     height: 220px;
   }
 
-  /* SVG geométrico ocupa full no mobile */
+  
   .hero-geo-svg {
     opacity: .6;
   }
@@ -2989,16 +2967,14 @@ footer::before {
   }
 }
 
-/* ════════════════════════════════════════════════
-   FUNDO DINÂMICO — GRID ANIMADO NO HERO
-   ════════════════════════════════════════════════ */
 
-/* Grade de pontos que se move lentamente */
+
+
 #hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  /* Pontos pequenos sobre o creme */
+  
   background-image: radial-gradient(circle, rgba(91, 33, 182, .12) 1px, transparent 1px);
   background-size: 36px 36px;
   pointer-events: none;
@@ -3006,7 +2982,7 @@ footer::before {
   animation: dot-drift 50s linear infinite;
 }
 
-/* Linhas diagonais sutis sobre a área roxa — via second pseudo */
+
 #hero::after {
   content: '';
   position: absolute;
@@ -3030,9 +3006,7 @@ footer::before {
   }
 }
 
-/* ════════════════════════════════════════════════
-   DECORAÇÕES GEOMÉTRICAS HERO — CSS PURO
-   ════════════════════════════════════════════════ */
+
 .hero-deco-layer {
   position: absolute;
   inset: 0;
@@ -3041,7 +3015,7 @@ footer::before {
   overflow: hidden;
 }
 
-/* Quadrado grande rotativo — violeta */
+
 .hd-square-lg {
   position: absolute;
   width: 110px;
@@ -3052,7 +3026,7 @@ footer::before {
   animation: hd-spin 38s linear infinite;
 }
 
-/* Quadrado médio rotativo inverso — âmbar */
+
 .hd-square-md {
   position: absolute;
   width: 54px;
@@ -3063,7 +3037,7 @@ footer::before {
   animation: hd-spin 22s linear infinite reverse;
 }
 
-/* Losango âmbar principal */
+
 .hd-diamond-a {
   position: absolute;
   width: 13px;
@@ -3075,7 +3049,7 @@ footer::before {
   opacity: 0.75;
 }
 
-/* Losango violeta menor */
+
 .hd-diamond-b {
   position: absolute;
   width: 8px;
@@ -3087,7 +3061,7 @@ footer::before {
   opacity: 0.50;
 }
 
-/* Losango verde */
+
 .hd-diamond-c {
   position: absolute;
   width: 6px;
@@ -3099,7 +3073,7 @@ footer::before {
   opacity: 0.55;
 }
 
-/* Anel circular tracejado */
+
 .hd-ring {
   position: absolute;
   width: 88px;
@@ -3111,7 +3085,7 @@ footer::before {
   animation: hd-spin 45s linear infinite reverse;
 }
 
-/* Cruz / plus âmbar */
+
 .hd-plus {
   position: absolute;
   top: 12%;
@@ -3143,7 +3117,7 @@ footer::before {
   left: 8px;
 }
 
-/* Triângulo verde pequeno */
+
 .hd-tri {
   position: absolute;
   width: 0;
@@ -3156,7 +3130,7 @@ footer::before {
   animation: hd-drift-c 26s ease-in-out infinite;
 }
 
-/* Linha diagonal curta */
+
 .hd-line {
   position: absolute;
   width: 60px;
@@ -3168,7 +3142,7 @@ footer::before {
   animation: hd-pulse 9s ease-in-out infinite;
 }
 
-/* ── Keyframes dos acentos decorativos ─────── */
+
 @keyframes hd-spin {
   from {
     transform: rotate(0deg);
@@ -3235,9 +3209,7 @@ footer::before {
   }
 }
 
-/* ════════════════════════════════════════════════
-   EFEITOS APRIMORADOS DE HOVER — CARDS
-   ════════════════════════════════════════════════ */
+
 .edu-card,
 .cert-card,
 .skill-card {
@@ -3260,9 +3232,7 @@ footer::before {
   border-color: rgba(91, 33, 182, .25);
 }
 
-/* ════════════════════════════════════════════════
-   SECTION LABEL — MARCADOR ANIMADO
-   ════════════════════════════════════════════════ */
+
 .section-label {
   position: relative;
 }
@@ -3294,17 +3264,13 @@ footer::before {
   }
 }
 
-/* ════════════════════════════════════════════════
-   SUBTÍTULO DE SEÇÃO — CONTRASTE MELHORADO
-   ════════════════════════════════════════════════ */
+
 .section-subtitle {
   color: var(--ink);
-  /* era --ink-muted: 5c5249 — borderline WCAG em fundo claro */
+  
 }
 
-/* ════════════════════════════════════════════════
-   TIMELINE CARD — BORDA ANIMADA NO HOVER
-   ════════════════════════════════════════════════ */
+
 .timeline-card {
   transition: box-shadow .28s, border-color .28s, transform .28s var(--ease-spring);
 }
@@ -3315,9 +3281,7 @@ footer::before {
   border-color: rgba(91, 33, 182, .3);
 }
 
-/* ════════════════════════════════════════════════
-   BARRA DE HABILIDADES — SHIMMER APÓS PREENCHIMENTO
-   ════════════════════════════════════════════════ */
+
 .skill-bar-track {
   overflow: hidden;
   position: relative;
@@ -3345,33 +3309,25 @@ footer::before {
   }
 }
 
-/* ════════════════════════════════════════════════
-   FOCUS OUTLINE — ACESSIBILIDADE APRIMORADA
-   ════════════════════════════════════════════════ */
+
 :focus-visible {
   outline: 2.5px solid var(--violet);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* ════════════════════════════════════════════════
-   NAVBAR LINK ATIVO — PESO MELHORADO
-   ════════════════════════════════════════════════ */
+
 .nav-link.active {
   font-weight: 700;
 }
 
-/* ════════════════════════════════════════════════
-   HOVER BOTÃO DE SCROLL-TOP — MICRO-ANIM
-   ════════════════════════════════════════════════ */
+
 #scroll-top:hover {
   animation: none;
   transform: translateY(-4px) scale(1.1);
 }
 
-/* ════════════════════════════════════════════════
-   RESPONSIVO — DECORAÇÕES GEOMÉTRICAS
-   ════════════════════════════════════════════════ */
+
 @media (max-width: 768px) {
 
   .hd-square-lg,
