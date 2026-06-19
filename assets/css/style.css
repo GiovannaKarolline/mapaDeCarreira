@@ -1623,10 +1623,10 @@ main {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 19px;
+  left: 11px;
   top: 24px;
   bottom: 24px;
-  width: 2px;
+  width: 3px;
   background: linear-gradient(to bottom,
       var(--violet) 0%,
       var(--violet-light) 40%,
@@ -1645,10 +1645,10 @@ main {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 19px;
+  left: 11px;
   top: 24px;
   bottom: 24px;
-  width: 2px;
+  width: 3px;
   background: repeating-linear-gradient(to bottom,
       var(--violet) 0px,
       var(--violet) 5px,
