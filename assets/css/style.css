@@ -1762,6 +1762,10 @@ main {
   color: #fff;
 }
 
+.timeline-card.current .timeline-icon {
+  color: #86efac;
+}
+
 .timeline-card.current .timeline-period {
   color: rgba(255, 255, 255, .6);
 }
