@@ -1315,7 +1315,7 @@ main {
   width: clamp(240px, 30vw, 360px);
   pointer-events: none;
   opacity: .55;
-  animation: code-float 8s ease-in-out infinite;
+  animation: code-float 6s ease-in-out infinite;
 }
 
 .hero-code-svg {
@@ -2162,7 +2162,7 @@ main {
   padding: 0 var(--s5);
 }
 
-.skill-card-header + .skill-item {
+.skill-card-header+.skill-item {
   padding-top: var(--s6);
 }
 
