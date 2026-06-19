@@ -14,7 +14,7 @@
     "tagline": "// aprendendo mais a cada dia",
     "photo": "assets/images/profile.jpg",
     "photoAlt": "Foto de Giovanna Karolline",
-    "summary": "Sou estudante de Análise e Desenvolvimento de Sistemas no IFSP e já estou de cabeça dentro de projetos reais. Faço parte de um time que desenvolve uma plataforma educacional em Flutter — cuido da documentação técnica, participo das cerimônias SCRUM e prototipo no Figma. Também estou em dois bootcamps ao mesmo tempo (Java e C# fullstack) porque não consigo ficar parada. Tenho certificações da AWS e da Cisco, e adoro aprender coisas novas mesmo quando são difíceis.",
+    "summary": "Sou estudante de Análise e Desenvolvimento de Sistemas no IFSP. Faço parte de um time que desenvolve uma plataforma educacional gamificada construída em Flutter, onde também cuido da documentação técnica, uso da metodologia ágil SCRUM e prototipação no Figma. Participo do curso profissionalizante de desenvolvimento C# fullstack porque gosto muito dessa área e acredito que essa oportunidade me trará mais segurança e abrirá portas para o mercado de trabalho.",
     "cvUrl": "Currículo_Giovanna_Ribeiro.PDF"
   },
   "contacts": [
@@ -101,7 +101,7 @@
       "period": "Agora · 2024–2026",
       "status": "current",
       "icon": "🌱",
-      "description": "Faculdade, bootcamps e projeto de extensão. Tenho usado Java, C#, Figma, SCRUM e documentação técnica em equipe. Estou buscando um estágio onde eu possa continuar crescendo, contribuir desde o início e aprender com pessoas mais experientes.",
+      "description": "Faculdade, bootcamps e projeto de extensão. Tenho usado Java, C#, Figma, SCRUM e documentação técnica em equipe. Estou buscando um estágio onde eu possa continuar crescendo, contribuindo junto à equipe e aprendendo muito com essa experiência.",
       "softSkills": [
         "Gosto de perguntar quando estou com dúvidas, me ajuda a entender de forma completa",
         "Trabalho bem em equipe, gosto de colaborar e trocar conhecimentos",
@@ -166,8 +166,8 @@
       "icon": "⭐",
       "description": "Meu objetivo é ser referência na minha área de atuação, quero ser a pessoa que define como o time vai construir os projetos, que resolve problemas difíceis e ajuda outras pessoas a crescerem.",
       "softSkills": [
-        "Balancear decisões técnicas ao impacto real no produto",
-        "Criar um ambiente onde as pessoas se sintam seguras pra errar e aprender",
+        "Balancear decisões técnicas considerando o impacto real no produto",
+        "Criar um ambiente onde as pessoas se sintam seguras pra errar e aprender, com responsabilidade e transparência",
         "Falar Inglês fluentemente para poder trabalhar internacionalmente"
       ],
       "roadmap": [
@@ -239,7 +239,7 @@
       "skills": [
         {
           "name": "Git & GitHub",
-          "level": 80
+          "level": 85
         },
         {
           "name": "SCRUM",
