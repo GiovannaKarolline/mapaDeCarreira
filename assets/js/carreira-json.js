@@ -4,7 +4,7 @@
 
 
 var ICONS = {
-  
+
   phone:
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">' +
     '<path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1-.24 1.1.4 2.3.6 3.6.6' +
@@ -27,7 +27,7 @@ var ICONS = {
     ' 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02' +
     '.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21' +
     'c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>',
-  
+
   graduation:
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">' +
     '<path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>',
@@ -35,7 +35,7 @@ var ICONS = {
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">' +
     '<path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14' +
     'c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>',
-  
+
   code:
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">' +
     '<path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>',
@@ -46,7 +46,7 @@ var ICONS = {
   shield:
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">' +
     '<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>',
-  
+
   seedling:
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true">' +
     '<path d="M17 8C8 10 5.9 16.17 3.82 21H5.71c.51-1.17 1.02-2.33 1.62-3.35C9.07 20.23 11.46 21 14 21' +
@@ -65,26 +65,26 @@ var ICONS = {
 
 
 var EMOJI_MAP = {
-  
-  '\uD83C\uDF93': 'graduation',  
-  '\uD83D\uDCCB': 'clipboard',   
-  
-  '\u2615': 'code',        
-  '\u2601\uFE0F': 'cloud',       
+
+  '\uD83C\uDF93': 'graduation',
+  '\uD83D\uDCCB': 'clipboard',
+
+  '\u2615': 'code',
+  '\u2601\uFE0F': 'cloud',
   '\uD83D\uDEE1\uFE0F': 'shield',
-  '\uD83D\uDEE1': 'shield',      
-  
-  '\uD83C\uDF31': 'seedling',    
-  '\uD83D\uDE80': 'rocket',      
-  '\u2B50': 'star',        
+  '\uD83D\uDEE1': 'shield',
+
+  '\uD83C\uDF31': 'seedling',
+  '\uD83D\uDE80': 'rocket',
+  '\u2B50': 'star',
 };
 
 
 var getIconHTML = function (iconKey, fallbackKey) {
   if (!iconKey) return ICONS[fallbackKey || 'star'] || '';
-  if (ICONS[iconKey]) return ICONS[iconKey];          
-  if (EMOJI_MAP[iconKey]) return ICONS[EMOJI_MAP[iconKey]]; 
-  return ICONS[fallbackKey || 'star'] || '';                 
+  if (ICONS[iconKey]) return ICONS[iconKey];
+  if (EMOJI_MAP[iconKey]) return ICONS[EMOJI_MAP[iconKey]];
+  return ICONS[fallbackKey || 'star'] || '';
 };
 
 
@@ -254,7 +254,7 @@ const initNavbar = () => {
   const menuBtn = byId('menu-btn');
   const navMenu = byId('nav-links');
 
-  
+
   const NAV_IDS = ['sobre', 'educacao', 'carreira', 'certificacoes', 'habilidades', 'idiomas'];
 
   const highlightLink = () => {
@@ -397,17 +397,17 @@ const renderMeta = ({ seo, profile }) => {
 const renderProfile = ({ profile, contacts, stats }) => {
   if (!profile) return;
 
-  
+
   const fn = byId('profile-name-first');
   const ln = byId('profile-name-last');
   if (fn && profile.name) fn.textContent = profile.name;
   if (ln && profile.lastName) {
     ln.textContent = profile.lastName;
-    ln.dataset.text = profile.lastName; 
+    ln.dataset.text = profile.lastName;
   }
 
-  
-  
+
+
   const hl = byId('profile-headline');
   if (hl && profile.headline) {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -424,9 +424,9 @@ const renderProfile = ({ profile, contacts, stats }) => {
       };
       setTimeout(tick, 620);
     }
-  }  
+  }
 
-  
+
   const loc = byId('profile-location');
   if (loc && profile.location) {
     Array.from(loc.childNodes).forEach((node) => {
@@ -435,28 +435,28 @@ const renderProfile = ({ profile, contacts, stats }) => {
     loc.appendChild(document.createTextNode(' ' + profile.location));
   }
 
-  
+
   const obj = byId('profile-objective');
   if (obj && profile.objective) obj.textContent = profile.objective;
 
-  
+
   const tgl = byId('profile-tagline');
   if (tgl && profile.tagline) tgl.textContent = profile.tagline;
 
   const summ = byId('profile-summary');
   if (summ && profile.summary) summ.textContent = profile.summary;
 
-  
+
   const photo = byId('profile-photo');
   if (photo) { photo.src = profile.photo; photo.alt = profile.photoAlt || ''; }
 
-  
+
   [byId('cv-link'), byId('nav-cv-link')].forEach((a) => {
     if (!a) return;
     a.href = profile.cvUrl || '#';
     a.setAttribute('aria-label', 'Baixar curriculo de ' + (profile.name || '') + ' em PDF');
   });
-  
+
   const statsEl = byId('hero-stats');
   if (statsEl && Array.isArray(stats)) {
     statsEl.innerHTML = '';
@@ -478,7 +478,7 @@ const renderProfile = ({ profile, contacts, stats }) => {
     });
   }
 
-  
+
   const contactList = byId('contact-list');
   if (contactList && Array.isArray(contacts)) {
     contactList.innerHTML = '';
@@ -652,7 +652,7 @@ const renderTimeline = (careerSteps) => {
       detail.setAttribute('aria-hidden', String(!open));
       btnTxt.textContent = open ? 'Ocultar detalhes' : 'Ver detalhes';
 
-      
+
       if (open) {
         const roadmapBadges = detail.querySelectorAll('.roadmap-badge');
         roadmapBadges.forEach((b, idx) => {
@@ -660,7 +660,7 @@ const renderTimeline = (careerSteps) => {
           b.style.transform = 'translateY(10px)';
           b.style.transition = `opacity .22s ease ${idx * 38}ms,
                                 transform .22s ease ${idx * 38}ms`;
-          
+
           void b.offsetWidth;
           b.style.opacity = '1';
           b.style.transform = 'translateY(0)';
@@ -821,7 +821,7 @@ const _loadingTimeout = setTimeout(function () {
     }
   };
 
-  
+
   if (typeof fetch !== 'undefined') {
     fetch('assets/data/carreira.json')
       .then((res) => {
@@ -837,7 +837,7 @@ const _loadingTimeout = setTimeout(function () {
         finalize(FALLBACK_DATA);
       });
   } else {
-    
+
     console.warn('[carreira-json] fetch indisponivel, usando fallback embutido.');
     finalize(FALLBACK_DATA);
   }
